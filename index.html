@@ -1,95 +1,170 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Converter</title>
-    <link href="https://fonts.googleapis.com/css?family=Indie+Flower|Krona+One|Pacifico&display=swap"
-        rel="stylesheet" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
-        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Indie+Flower|Krona+One|Pacifico&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
     <link rel="stylesheet" href="assets/css/styles.css" />
-</head>
+  </head>
 
-<body>
+  <body>
+    <!-- Navbar Section -->
     <section class="menu-bar">
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand text-center" href="index.html">COINCHANGE</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
 
-        <!--Navbar begins-->
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <a class="navbar-brand text-center" href="index.html">COINCHANGE</a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="about.html">About </a>
+            </li>
 
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav ml-auto">
-                    <li class="nav-item">
-                        <a class="nav-link" href="about.html">About </a>
-                    </li>
-
-                    <li class="nav-item">
-                        <a class="nav-link" href="contact.html">Contact </a>
-                    </li>
-                </ul>
-            </div>
-        </nav>
+            <li class="nav-item">
+              <a class="nav-link" href="contact.html">Contact </a>
+            </li>
+          </ul>
+        </div>
+      </nav>
     </section>
 
     <!-- Main section -->
     <main>
-        <div class="container-fluid">
+      <div class="container-fluid">
+        <div class="row">
+          <!-- Sidebar -->
+          <div class="col-md-4">
+            <!-- Search -->
             <div class="row">
-
-                <!-- Sidebar -->
-                <div class="col-md-4">
-
-                    <!-- Search -->
-                    <div class="row">
-                        <div class="col">
-                            <form action="">
-                                <div class="bg-light rounded rounded-pill shadow-sm my-4 mx-2 p-2">
-                                    <div class="input-group">
-                                        <input type="search" placeholder="What're you searching for?"
-                                            aria-describedby="button-addon1" class="form-control border-0 bg-light">
-                                        <div class="input-group-append">
-                                            <button id="button-addon1" type="submit" class="btn btn-link text-primary"><i
-                                                    class="fa fa-search"></i></button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </form>
-                        </div>
+              <div class="col">
+                <form action="">
+                  <div
+                    class="bg-light rounded rounded-pill shadow-sm my-4 mx-2 p-2"
+                  >
+                    <div class="input-group">
+                      <input
+                        type="search"
+                        placeholder="What're you searching for?"
+                        aria-describedby="button-addon1"
+                        class="form-control border-0 bg-light"
+                      />
+                      <div class="input-group-append">
+                        <button
+                          id="button-addon1"
+                          type="submit"
+                          class="btn btn-link text-primary"
+                        >
+                          <i class="fa fa-search"></i>
+                        </button>
+                      </div>
                     </div>
-
-                    <!-- Announcement -->
-                    <div class="row">
-                        <div class="col d-flex justify-content-center">
-                            <p>Current Total Market Share: 10000kjvwekfglfh;oaifh;oejf</p>
-                        </div>
-                    </div>
-                </div>
-
-
-                <div class="col-md-8 bg-dark">
-                    <h1>70% col</h1>
-
-                </div>
+                  </div>
+                </form>
+              </div>
             </div>
+
+            <!-- Announcement -->
+            <div class="row mb-2">
+              <div class="col text-center">
+                <p><h2>Current Total Market Share:</h2></p>
+                <p>Whatever smth from api</p>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col">
+                <div class="list-group">
+                  <a href="#" class="list-group-item list-group-item-action"
+                    >Bitcoin</a
+                  >
+
+                  <a
+                    href="#"
+                    class="list-group-item list-group-item-action list-group-item-primary"
+                    >Etherium</a
+                  >
+                  <a
+                    href="#"
+                    class="list-group-item list-group-item-action list-group-item-secondary"
+                    >Something else</a
+                  >
+                  <a
+                    href="#"
+                    class="list-group-item list-group-item-action list-group-item-success"
+                    >And so on</a
+                  >
+                  <a
+                    href="#"
+                    class="list-group-item list-group-item-action list-group-item-danger"
+                    >This is a danger list group item</a
+                  >
+                  <a
+                    href="#"
+                    class="list-group-item list-group-item-action list-group-item-warning"
+                    >This is a warning list group item</a
+                  >
+                  <a
+                    href="#"
+                    class="list-group-item list-group-item-action list-group-item-info"
+                    >This is a info list group item</a
+                  >
+                  <a
+                    href="#"
+                    class="list-group-item list-group-item-action list-group-item-light"
+                    >This is a light list group item</a
+                  >
+                  <a
+                    href="#"
+                    class="list-group-item list-group-item-action list-group-item-dark"
+                    >This is a dark list group item</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-8 bg-dark">
+            <h1>70% col</h1>
+          </div>
         </div>
+      </div>
     </main>
+  </body>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script
+    src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+    crossorigin="anonymous"
+  ></script>
+  <script
+    src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+    integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+    crossorigin="anonymous"
+  ></script>
 
-</body>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
-    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
-</script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
-    integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous">
-</script>
-
-<script src="assets/js/script.js"></script>
-
+  <script src="assets/js/script.js"></script>
 </html>
