@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
         integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous" />
-    <link rel="stylesheet" href="assets/css/styles.css" />
+    <link rel="stylesheet" href="assets/css/style_contact.css" />
 </head>
 
 <body>
@@ -37,15 +37,48 @@
         </nav>
     </section>
 
-    <!-- Main section -->
+    <!-- Main contact section -->
     <main>
         <div class="container-fluid">
             <div class="row">
-                <div class="col-md-4 bg-dark">
+                <div class="col-md-4 mt-5 bg-dark">
                     <h1>30% col</h1>
                 </div>
-                <div class="col-md-8">
-                    <h1>70% col</h1>
+                <div class="offset-md-1 col-md-6 offset-md-1 mt-5">
+                    <div class="heading text-center">
+                        <h1>Contact us</h1>
+                    </div>
+                    <div class="form-group ">
+                        <span class="contact1-form-title">
+                            
+                        </span>
+                        <div class="wrap-input1 validate-input"  required>
+                            <input class="input1" type="text" name="fname" placeholder="First Name*" required>
+                            <span class="shadow-input1"></span>
+                        </div>
+                        <div class="wrap-input1 validate-input"  required>
+                            <input class="input1" type="text" name="lname" placeholder="Last Name*" required>
+                            <span class="shadow-input1"></span>
+                        </div>
+                        <div class="wrap-input1 validate-input" data-validate = "Valid email is required: ex@abc.xyz"required>
+                            <input class="input1" type="email" name="email" placeholder="Email*"required>
+                            <span class="shadow-input1"></span>
+                        </div>
+                       			
+        
+                        <div class="wrap-input1 validate-input" data-validate = "Message is required">
+                            <textarea class="input1" name="message" placeholder="Message"></textarea>
+                            <span class="shadow-input1"></span>
+                        </div>
+                        <div class="container-contact1-form-btn">
+                            <button class="contact1-form-btn" type="submit" name="submit" value="create">
+                                <span>
+                                    Submit			
+                                </span>
+                            </button>
+                        </div>
+                    </div>
+                </form> 
 
                 </div>
             </div>
