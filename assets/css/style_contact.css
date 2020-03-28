@@ -230,3 +230,23 @@ textarea.input1 + .shadow-input1 {
   -o-transform: translateX(10px);
   transform: translateX(10px);
 }
+
+.social ul li {
+  padding: 0 5px 0 55px;
+  margin: 0;
+  list-style: none;
+  font-size: 40px;
+}
+
+.fa {
+  color: #244bbc;
+}
+
+@media (max-width: 425px) {
+  .social ul li {
+    padding: 0 5px 0 35px;
+    margin: 0;
+    display: inline;
+    font-size: 30px;
+  }
+}

@@ -1,7 +1,16 @@
-$(document).on("click", "button", function() {
+function displayMessage(type, message) {
+  msgDiv.textContent = message;
+  //msgDiv.setAttribute("class", type);
+}
+
+$(document).on("click", "button", function(event) {
+  event.preventDefault();
   $('input[type="text"]').each(function() {
     var id = $(this).attr("id");
     var value = $(this).val();
+    if (value !== "") {
+      displayMessage("success", "Registered successfully");
+    }
     localStorage.setItem(id, value);
   });
 });
