@@ -1,185 +1,199 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Converter</title>
-    <link
-      href="https://fonts.googleapis.com/css?family=Indie+Flower|Krona+One|Pacifico&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
-    />
-    <link
-      rel="stylesheet"
-      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
-      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
-      crossorigin="anonymous"
-    />
-    <link rel="stylesheet" href="assets/css/styles.css" />
-  </head>
 
-  <body>
-    <!-- Navbar Section -->
-    <section class="menu-bar">
-      <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <a class="navbar-brand text-center" href="index.html">COINCHANGE</a>
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-toggle="collapse"
-          data-target="#navbarSupportedContent"
-          aria-controls="navbarSupportedContent"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Converter</title>
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Indie+Flower|Krona+One|Pacifico&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+  <!-- Bootstrap core CSS -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Material Design Bootstrap -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.14.1/css/mdb.min.css" rel="stylesheet">
+  <!-- Custom Styles -->
+  <link rel="stylesheet" href="assets/css/style_index.css" />
+</head>
 
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav ml-auto">
-            <li class="nav-item">
-              <a class="nav-link" href="about.html">About </a>
-            </li>
+<body class="bg-dark text-light">
 
-            <li class="nav-item">
-              <a class="nav-link" href="contact.html">Contact </a>
-            </li>
-          </ul>
-        </div>
-      </nav>
-    </section>
+  <!--Navbar-->
+  <nav class="navbar navbar-expand-lg navbar-light peach-gradient lighten-3 py-4 mb-4 font-weight-bold z-depth-1">
 
-    <!-- Main section -->
-    <main>
-      <div class="container-fluid">
-        <div class="row">
-          <!-- Sidebar -->
-          <div class="col-md-4">
-            <!-- Search -->
-            <div class="row">
-              <div class="col">
-                <form action="">
-                  <div
-                    class="bg-light rounded rounded-pill shadow-sm my-4 mx-2 p-2"
-                  >
+    <!-- Navbar brand -->
+    <a class="navbar-brand" href="#">CO<span class="text-white">IN</span>CHANGE</a>
+
+    <!-- Collapse button -->
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#basicExampleNav"
+      aria-controls="basicExampleNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse">
+
+      <!-- Links -->
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="index.html">Home
+            <span class="sr-only">(current)</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="about.html">About </a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="contact.html">Contact </a>
+        </li>
+
+      </ul>
+      <!-- Links -->
+    </div>
+    <!-- Collapsible content -->
+
+  </nav>
+  <!--/.Navbar-->
+
+  <!-- Main section -->
+  <main>
+    <div class="container-fluid">
+      <div class="row">
+        <!-- Sidebar -->
+        <div class="col-md-4">
+          <!-- Search -->
+          <div class="row">
+            <div class="col">
+            </div>
+          </div>
+
+          <!-- Announcement -->
+          <div class="row mb-2">
+            <div class="col text-center">
+              <p>
+                <h2>Currency Converter</h2>
+              </p>
+              <div class="row">
+                <div class="col">
+                  <div class="converter">
+                    <div class="input-group mb-2">
+                      <div class="input-group-prepend">
+                        <span class="input-group-text bg-dark text-light">From</span>
+                        <select class="browser-default custom-select rounded-0 bg-dark text-light" style="border-left: 0;" id="inputGroupSelect03" aria-label="Example select with button addon">
+                          <option selected>Bitcoin</option>
+                          <option value="1">Etherium</option>
+                          <option value="2">Two</option>
+                          <option value="3">Three</option>
+                        </select>
+                      </div>
+                      <input type="text" class="form-control bg-dark text-light" aria-label="Dollar amount (with dot and two decimal places)">
+                    </div>
+                    
                     <div class="input-group">
-                      <input
-                        type="search"
-                        placeholder="What're you searching for?"
-                        aria-describedby="button-addon1"
-                        class="form-control border-0 bg-light"
-                      />
+                      <input type="text" class="form-control bg-dark text-light" aria-label="Dollar amount (with dot and two decimal places)">
                       <div class="input-group-append">
-                        <button
-                          id="button-addon1"
-                          type="submit"
-                          class="btn btn-link text-primary"
-                        >
-                          <i class="fa fa-search"></i>
-                        </button>
+                        <span class="input-group-text bg-dark text-light">To</span>
+                        <select class="browser-default custom-select bg-dark text-light" style="border-left: 0; border-top-left-radius: 0px; border-bottom-left-radius: 0px" id="inputGroupSelect" aria-label="Example select with button addon">
+                          <option selected>Bitcoin</option>
+                          <option value="1">Etherium</option>
+                          <option value="2">Two</option>
+                          <option value="3">Three</option>
+                        </select>
                       </div>
                     </div>
                   </div>
-                </form>
-              </div>
-            </div>
-
-            <!-- Announcement -->
-            <div class="row mb-2">
-              <div class="col text-center">
-                <p><h2>Currency Converter</h2></p>
-               
-                <div class="input-group mb-3">
-                    <div class="input-group-prepend">
-                      <label class="input-group-text" for="inputGroupSelect01">From</label>
-                    </div>
-                    <select class="custom-select" id="inputGroupSelect01">
-                      <option selected>Choose...</option>
-                      <option value="1">One</option>
-                      <option value="2">Two</option>
-                      <option value="3">Three</option>
-                    </select>
-
-                    
-                  </div>
-
-
-              </div>
-            </div>
-
-            <div class="row">
-              <div class="col">
-                <div class="list-group">
-                  <a href="#" class="list-group-item list-group-item-action"
-                    >Bitcoin</a
-                  >
-
-                  <a
-                    href="#"
-                    class="list-group-item list-group-item-action list-group-item-primary"
-                    >Etherium</a
-                  >
-                  <a
-                    href="#"
-                    class="list-group-item list-group-item-action list-group-item-secondary"
-                    >Something else</a
-                  >
-                  <a
-                    href="#"
-                    class="list-group-item list-group-item-action list-group-item-success"
-                    >And so on</a
-                  >
-                  <a
-                    href="#"
-                    class="list-group-item list-group-item-action list-group-item-danger"
-                    >This is a danger list group item</a
-                  >
-                  <a
-                    href="#"
-                    class="list-group-item list-group-item-action list-group-item-warning"
-                    >This is a warning list group item</a
-                  >
-                  <a
-                    href="#"
-                    class="list-group-item list-group-item-action list-group-item-info"
-                    >This is a info list group item</a
-                  >
-                  <a
-                    href="#"
-                    class="list-group-item list-group-item-action list-group-item-light"
-                    >This is a light list group item</a
-                  >
-                  <a
-                    href="#"
-                    class="list-group-item list-group-item-action list-group-item-dark"
-                    >This is a dark list group item</a
-                  >
                 </div>
               </div>
+
+
+
             </div>
           </div>
 
-          <div class="col-md-8 bg-dark">
-            <h1>70% col</h1>
+          <div class="row">
+            <div class="col">
+              <!-- Search -->
+              <div class="input-group md-form form-sm form-2 pl-0">
+                <input class="form-control my-0 py-1 amber-border" type="text" placeholder="Search" aria-label="Search">
+                <div class="input-group-append">
+                  <span class="input-group-text peach-gradient lighten-3 text-black" id="basic-text1"><i class="fas fa-search text-grey"
+                      aria-hidden="true"></i></span>
+                </div>
+              </div>
+              <!-- Currencies List -->
+              <div class="list-group">
+                <a href="#" class="list-group-item list-group-item-action currency">Bitcoin</a>
+
+                <a href="#" class="list-group-item list-group-item-action list-group-item-primary currency">Etherium</a>
+                <a href="#" class="list-group-item list-group-item-action list-group-item-secondary currency">Something
+                  else</a>
+                <a href="#" class="list-group-item list-group-item-action list-group-item-success currency">And so
+                  on</a>
+                <a href="#" class="list-group-item list-group-item-action list-group-item-danger currency">This is a
+                  danger list
+                  group item</a>
+                <a href="#" class="list-group-item list-group-item-action list-group-item-warning currency">This is a
+                  warning
+                  list group item</a>
+                <a href="#" class="list-group-item list-group-item-action list-group-item-info currency">This is a info
+                  list
+                  group item</a>
+                <a href="#" class="list-group-item list-group-item-action list-group-item-light currency">This is a
+                  light list
+                  group item</a>
+                <a href="#" class="list-group-item list-group-item-action list-group-item-dark currency">This is a dark
+                  list
+                  group item</a>
+              </div>
+            </div>
           </div>
         </div>
-      </div>
-    </main>
-  </body>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-  <script
-    src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
-    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
-    crossorigin="anonymous"
-  ></script>
-  <script
-    src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
-    integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
-    crossorigin="anonymous"
-  ></script>
 
-  <script src="assets/js/script.js"></script>
+        <div class="col-md-8" id="mainInfo">
+
+        </div>
+      </div>
+    </div>
+  </main>
+</body>
+<!-- JQuery -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<!-- Bootstrap tooltips -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js"></script>
+<!-- Bootstrap core JavaScript -->
+<script type="text/javascript"
+  src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/js/bootstrap.min.js"></script>
+<!-- MDB core JavaScript -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.14.1/js/mdb.min.js"></script>
+
+<script src="assets/js/script.js"></script>
+<script>
+
+  basicInfo = {
+    Bitcoin: "Main info blah-blah-1",
+    Etherium: "Main info blah-blah-2"
+  }
+
+  $(document).on("click", ".currency", function () {
+
+    $("#mainInfo").empty()
+
+    var currencyName = $(this).text();
+
+    $("<h1>", {
+      text: currencyName,
+      appendTo: mainInfo
+    })
+
+    $("<p>", {
+      text: basicInfo[currencyName],
+      appendTo: mainInfo
+    })
+
+  });
+</script>
+
 </html>
