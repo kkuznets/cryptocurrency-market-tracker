@@ -15,47 +15,47 @@
   <!-- Material Design Bootstrap -->
   <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.14.1/css/mdb.min.css" rel="stylesheet">
   <!-- Custom Styles -->
-  <link rel="stylesheet" href="assets/css/style_index.css"/>
+  <link rel="stylesheet" href="assets/css/style_index.css" />
 </head>
 
 <body class="bg-dark text-light">
 
   <!--Navbar-->
-  <nav class="navbar navbar-expand-lg navbar-light peach-gradient lighten-3 py-4 mb-4 font-weight-bold z-depth-1">
+  <nav
+  class="navbar navbar-expand-lg navbar-light peach-gradient lighten-3 py-4  mb-4 font-weight-bold z-depth-1"
+>
+  <a class="navbar-brand" href="index.html"
+    >CO<span class="text-white">IN</span>CHANGE</a
+  >
+  <button
+    class="navbar-toggler"
+    type="button"
+    data-toggle="collapse"
+    data-target="#navbarSupportedContent"
+    aria-controls="navbarSupportedContent"
+    aria-expanded="false"
+    aria-label="Toggle navigation"
+  >
+    <span class="navbar-toggler-icon"></span>
+  </button>
 
-    <!-- Navbar brand -->
-    <a class="navbar-brand" href="index.html">CO<span class="text-white">IN</span>CHANGE</a>
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav ml-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="index.html">Home </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="about.html">About </a>
+      </li>
 
-    <!-- Collapse button -->
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#basicExampleNav"
-      aria-controls="basicExampleNav" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-
-    <!-- Collapsible content -->
-    <div class="collapse navbar-collapse">
-
-      <!-- Links -->
-      <ul class="navbar-nav ml-auto">
-        <li class="nav-item active">
-          <a class="nav-link" href="index.html">Home
-            <span class="sr-only">(current)</span>
-          </a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="about.html">About </a>
-        </li>
-
-        <li class="nav-item">
-          <a class="nav-link" href="contact.html">Contact </a>
-        </li>
-
-      </ul>
-      <!-- Links -->
-    </div>
-    <!-- Collapsible content -->
-
-  </nav>
+      <li class="nav-item ">
+        <a class="nav-link" href="contact.html"
+          >Contact <span class="sr-only">(current)</span>
+        </a>
+      </li>
+    </ul>
+  </div>
+</nav>
   <!--/.Navbar-->
 
   <!-- Main section -->
@@ -82,21 +82,26 @@
                     <div class="input-group mb-2">
                       <div class="input-group-prepend">
                         <span class="input-group-text bg-dark text-light">From</span>
-                        <select class="browser-default custom-select rounded-0 bg-dark text-light" style="border-left: 0;" id="inputGroupSelect03" aria-label="Example select with button addon">
+                        <select class="browser-default custom-select rounded-0 bg-dark text-light"
+                          style="border-left: 0;" id="inputGroupSelect03" aria-label="Example select with button addon">
                           <option selected>Bitcoin</option>
                           <option value="1">Etherium</option>
                           <option value="2">Two</option>
                           <option value="3">Three</option>
                         </select>
                       </div>
-                      <input type="text" class="form-control bg-dark text-light" aria-label="Dollar amount (with dot and two decimal places)">
+                      <input type="text" class="form-control bg-dark text-light"
+                        aria-label="Dollar amount (with dot and two decimal places)">
                     </div>
-                    
+
                     <div class="input-group">
-                      <input type="text" class="form-control bg-dark text-light" aria-label="Dollar amount (with dot and two decimal places)">
+                      <input type="text" class="form-control bg-dark text-light"
+                        aria-label="Dollar amount (with dot and two decimal places)">
                       <div class="input-group-append">
                         <span class="input-group-text bg-dark text-light">To</span>
-                        <select class="browser-default custom-select bg-dark text-light" style="border-left: 0; border-top-left-radius: 0px; border-bottom-left-radius: 0px" id="inputGroupSelect" aria-label="Example select with button addon">
+                        <select class="browser-default custom-select bg-dark text-light"
+                          style="border-left: 0; border-top-left-radius: 0px; border-bottom-left-radius: 0px"
+                          id="inputGroupSelect" aria-label="Example select with button addon">
                           <option selected>Bitcoin</option>
                           <option value="1">Etherium</option>
                           <option value="2">Two</option>
@@ -117,17 +122,18 @@
             <div class="col">
               <!-- Search -->
               <div class="input-group md-form form-sm form-2 pl-0">
-                <input class="form-control my-0 py-1 amber-border" type="text" placeholder="Search" aria-label="Search">
+                <input class="form-control my-0 py-1 amber-border" id="Search"type="text" placeholder="Search" aria-label="Search">
                 <div class="input-group-append">
-                  <span class="input-group-text peach-gradient lighten-3 text-black" id="basic-text1"><i class="fas fa-search text-grey"
-                      aria-hidden="true"></i></span>
+                  <button class="input-group-text peach-gradient lighten-3 text-black" id="searchBtn"><i class="fas fa-search text-grey"
+                      aria-hidden="true"></i></button>
                 </div>
               </div>
               <!-- Currencies List -->
               <div class="list-group">
                 <a href="#" class="list-group-item list-group-item-action sunny-morning-gradient currency">Bitcoin</a>
 
-                <a href="#" class="list-group-item list-group-item-action deep-blue-gradient list-group-item-primary currency">Etherium</a>
+                <a href="#"
+                  class="list-group-item list-group-item-action deep-blue-gradient list-group-item-primary currency">Etherium</a>
                 <a href="#" class="list-group-item list-group-item-action list-group-item-secondary currency">Something
                   else</a>
                 <a href="#" class="list-group-item list-group-item-action list-group-item-success currency">And so
@@ -193,7 +199,14 @@
       appendTo: mainInfo
     })
 
+    fetch("https://api.nomics.com/v1/currencies/ticker?key=77a47350048c6105b642279cd8c59d85&ids=BTC,ETH,XRP&interval=1d,30d&convert=EUR", {
+  method: 'GET',
+  mode: 'no-cors', // If this doesn't work, replace with 'no-cors'
+}).then()
+
   });
+
+
 </script>
 
 </html>
