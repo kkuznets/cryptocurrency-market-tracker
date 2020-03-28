@@ -15,7 +15,7 @@
   <!-- Material Design Bootstrap -->
   <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.14.1/css/mdb.min.css" rel="stylesheet">
   <!-- Custom Styles -->
-  <link rel="stylesheet" href="assets/css/style_index.css"/>
+  <link rel="stylesheet" href="assets/css/style_index.css" />
 </head>
 
 <body class="bg-dark text-light">
@@ -82,21 +82,26 @@
                     <div class="input-group mb-2">
                       <div class="input-group-prepend">
                         <span class="input-group-text bg-dark text-light">From</span>
-                        <select class="browser-default custom-select rounded-0 bg-dark text-light" style="border-left: 0;" id="inputGroupSelect03" aria-label="Example select with button addon">
+                        <select class="browser-default custom-select rounded-0 bg-dark text-light"
+                          style="border-left: 0;" id="inputGroupSelect03" aria-label="Example select with button addon">
                           <option selected>Bitcoin</option>
                           <option value="1">Etherium</option>
                           <option value="2">Two</option>
                           <option value="3">Three</option>
                         </select>
                       </div>
-                      <input type="text" class="form-control bg-dark text-light" aria-label="Dollar amount (with dot and two decimal places)">
+                      <input type="text" class="form-control bg-dark text-light"
+                        aria-label="Dollar amount (with dot and two decimal places)">
                     </div>
-                    
+
                     <div class="input-group">
-                      <input type="text" class="form-control bg-dark text-light" aria-label="Dollar amount (with dot and two decimal places)">
+                      <input type="text" class="form-control bg-dark text-light"
+                        aria-label="Dollar amount (with dot and two decimal places)">
                       <div class="input-group-append">
                         <span class="input-group-text bg-dark text-light">To</span>
-                        <select class="browser-default custom-select bg-dark text-light" style="border-left: 0; border-top-left-radius: 0px; border-bottom-left-radius: 0px" id="inputGroupSelect" aria-label="Example select with button addon">
+                        <select class="browser-default custom-select bg-dark text-light"
+                          style="border-left: 0; border-top-left-radius: 0px; border-bottom-left-radius: 0px"
+                          id="inputGroupSelect" aria-label="Example select with button addon">
                           <option selected>Bitcoin</option>
                           <option value="1">Etherium</option>
                           <option value="2">Two</option>
@@ -119,15 +124,16 @@
               <div class="input-group md-form form-sm form-2 pl-0">
                 <input class="form-control my-0 py-1 amber-border" type="text" placeholder="Search" aria-label="Search">
                 <div class="input-group-append">
-                  <span class="input-group-text peach-gradient lighten-3 text-black" id="basic-text1"><i class="fas fa-search text-grey"
-                      aria-hidden="true"></i></span>
+                  <span class="input-group-text peach-gradient lighten-3 text-black" id="basic-text1"><i
+                      class="fas fa-search text-grey" aria-hidden="true"></i></span>
                 </div>
               </div>
               <!-- Currencies List -->
               <div class="list-group">
                 <a href="#" class="list-group-item list-group-item-action sunny-morning-gradient currency">Bitcoin</a>
 
-                <a href="#" class="list-group-item list-group-item-action deep-blue-gradient list-group-item-primary currency">Etherium</a>
+                <a href="#"
+                  class="list-group-item list-group-item-action deep-blue-gradient list-group-item-primary currency">Etherium</a>
                 <a href="#" class="list-group-item list-group-item-action list-group-item-secondary currency">Something
                   else</a>
                 <a href="#" class="list-group-item list-group-item-action list-group-item-success currency">And so
@@ -193,7 +199,14 @@
       appendTo: mainInfo
     })
 
+    fetch("https://api.nomics.com/v1/currencies/ticker?key=77a47350048c6105b642279cd8c59d85&ids=BTC,ETH,XRP&interval=1d,30d&convert=EUR", {
+  method: 'GET',
+  mode: 'no-cors', // If this doesn't work, replace with 'no-cors'
+}).then()
+
   });
+
+
 </script>
 
 </html>
