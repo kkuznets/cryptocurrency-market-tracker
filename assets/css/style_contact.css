@@ -249,4 +249,13 @@ textarea.input1 + .shadow-input1 {
     display: inline;
     font-size: 30px;
   }
+  .desktop.col-md-4 {
+    display: none;
+  }
+}
+
+@media (min-width: 426px) {
+  .mob.col-md-4 {
+    display: none;
+  }
 }
