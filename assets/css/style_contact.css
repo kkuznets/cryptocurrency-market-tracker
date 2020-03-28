@@ -252,6 +252,9 @@ textarea.input1 + .shadow-input1 {
   .desktop.col-md-4 {
     display: none;
   }
+  i.fab.fa-instagram.mr-4.mb-4.peach-gradient.p-2.white-text.rounded {
+    font-size: 30px !important;
+  }
 }
 
 @media (min-width: 426px) {
@@ -270,4 +273,7 @@ textarea.input1 + .shadow-input1 {
   color: red;
   text-align: center;
   margin: 15px 0px;
+}
+i.fab.fa-instagram.mr-4.mb-4.peach-gradient.p-2.white-text.rounded {
+  font-size: 47px;
 }

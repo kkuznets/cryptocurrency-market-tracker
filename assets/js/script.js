@@ -1,26 +1,16 @@
-function displayMessage(type, message) {
-  msgDiv.textContent = message;
-  msgDiv.setAttribute("class", type);
-}
+$(document).ready(function() {
+  $(searchBtn).on("click", function() {
+    event.preventDefault();
+    alert("clicked");
 
-$(document).on("click", "button", function(event) {
-  event.preventDefault();
-  $('input[type="text"]').each(function() {
-    var id = $(this).attr("id");
-    var value = $(this).val();
-    if (value !== "") {
-      displayMessage("success", "Registered successfully");
-    } else {
-      displayMessage("error", "Enter value");
-    }
-    localStorage.setItem(id, value);
-  });
-});
-
-$(document).on("click", "button", function() {
-  $('textarea[type="text"]').each(function() {
-    var id = $(this).attr("id");
-    var value = $(this).val();
-    localStorage.setItem(id, value);
+    var queryURL =
+      "https://api.nomics.com/v1/markets?" +
+      "key=cc8e4bc4be02800a1766ad62300c076b";
+    $.ajax({
+      url: queryURL,
+      method: "GET"
+    }).then(function(response) {
+      console.log(response);
+    });
   });
 });
