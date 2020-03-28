@@ -1,6 +1,6 @@
 function displayMessage(type, message) {
   msgDiv.textContent = message;
-  //msgDiv.setAttribute("class", type);
+  msgDiv.setAttribute("class", type);
 }
 
 $(document).on("click", "button", function(event) {
@@ -10,6 +10,8 @@ $(document).on("click", "button", function(event) {
     var value = $(this).val();
     if (value !== "") {
       displayMessage("success", "Registered successfully");
+    } else {
+      displayMessage("error", "Enter value");
     }
     localStorage.setItem(id, value);
   });

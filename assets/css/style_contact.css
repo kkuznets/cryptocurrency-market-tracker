@@ -259,3 +259,15 @@ textarea.input1 + .shadow-input1 {
     display: none;
   }
 }
+
+.success {
+  color: green;
+  text-align: center;
+  margin: 15px 0px;
+}
+
+.error {
+  color: red;
+  text-align: center;
+  margin: 15px 0px;
+}
