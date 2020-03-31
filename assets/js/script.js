@@ -1,16 +1,19 @@
 $(document).ready(function() {
-  $(searchBtn).on("click", function() {
-    event.preventDefault();
-    alert("clicked");
-
-    var queryURL =
-      "https://api.nomics.com/v1/markets?" +
-      "key=cc8e4bc4be02800a1766ad62300c076b";
-    $.ajax({
-      url: queryURL,
-      method: "GET"
-    }).then(function(response) {
-      console.log(response);
-    });
+  $("#btcInput").keypress(function(event) {
+    // event.preventDefault();
+    var keycode = event.keyCode ? event.keyCode : event.which;
+    if (keycode == "13") {
+      var queryURL =
+        "https://min-api.cryptocompare.com/data/price?fsym=BTC&tsyms=USD,EUR,AUD" +
+        "&api_key=4032fc9713c205be9d015deab9bbbce1bb323fc207e32e773df9be829a3aa93f";
+      $.ajax({
+        url: queryURL,
+        dataType: "json",
+        method: "GET"
+      }).then(function(response) {
+        console.log(response.USD);
+        $("#currencyDisplay").val(response.USD);
+      });
+    }
   });
 });
