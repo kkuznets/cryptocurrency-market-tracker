@@ -21,41 +21,29 @@
 <body class="bg-dark text-light">
 
   <!--Navbar-->
-  <nav
-  class="navbar navbar-expand-lg navbar-light peach-gradient lighten-3 py-4  mb-4 font-weight-bold z-depth-1"
->
-  <a class="navbar-brand" href="index.html"
-    >CO<span class="text-white">IN</span>CHANGE</a
-  >
-  <button
-    class="navbar-toggler"
-    type="button"
-    data-toggle="collapse"
-    data-target="#navbarSupportedContent"
-    aria-controls="navbarSupportedContent"
-    aria-expanded="false"
-    aria-label="Toggle navigation"
-  >
-    <span class="navbar-toggler-icon"></span>
-  </button>
+  <nav class="navbar navbar-expand-lg navbar-light peach-gradient lighten-3 py-4  mb-4 font-weight-bold z-depth-1">
+    <a class="navbar-brand" href="index.html">CO<span class="text-white">IN</span>CHANGE</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
 
-  <div class="collapse navbar-collapse" id="navbarSupportedContent">
-    <ul class="navbar-nav ml-auto">
-      <li class="nav-item active">
-        <a class="nav-link" href="index.html">Home </a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="about.html">About </a>
-      </li>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="index.html">Home </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="about.html">About </a>
+        </li>
 
-      <li class="nav-item ">
-        <a class="nav-link" href="contact.html"
-          >Contact <span class="sr-only">(current)</span>
-        </a>
-      </li>
-    </ul>
-  </div>
-</nav>
+        <li class="nav-item ">
+          <a class="nav-link" href="contact.html">Contact <span class="sr-only">(current)</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </nav>
   <!--/.Navbar-->
 
   <!-- Main section -->
@@ -90,7 +78,7 @@
                           <option value="3">Three</option>
                         </select>
                       </div>
-                      <input type="text" id="btcInput"class="form-control bg-dark text-light"
+                      <input type="text" id="btcInput" class="form-control bg-dark text-light"
                         aria-label="Dollar amount (with dot and two decimal places)">
                     </div>
 
@@ -105,7 +93,7 @@
                           <option selected>USD</option>
                           <option value="1">AUD</option>
                           <option value="2">EUR</option>
-                        
+
                         </select>
                       </div>
                     </div>
@@ -122,18 +110,21 @@
             <div class="col">
               <!-- Search -->
               <div class="input-group md-form form-sm form-2 pl-0">
-                <input class="form-control my-0 py-1 amber-border" id="Search"type="text" placeholder="Search" aria-label="Search">
+                <input class="form-control my-0 py-1 amber-border" id="Search" type="text" placeholder="Search"
+                  aria-label="Search">
                 <div class="input-group-append">
-                  <button class="input-group-text peach-gradient lighten-3 text-black" id="searchBtn"><i class="fas fa-search text-grey"
-                      aria-hidden="true"></i></button>
+                  <button class="input-group-text peach-gradient lighten-3 text-black" id="searchBtn"><i
+                      class="fas fa-search text-grey" aria-hidden="true"></i></button>
                 </div>
               </div>
               <!-- Currencies List -->
               <div class="list-group">
-                <a href="#" class="list-group-item list-group-item-action sunny-morning-gradient currency">Bitcoin</a>
+                <a href="#" class="list-group-item list-group-item-action sunny-morning-gradient currency"
+                  id="BTC">Bitcoin</a>
 
                 <a href="#"
-                  class="list-group-item list-group-item-action deep-blue-gradient list-group-item-primary currency">Etherium</a>
+                  class="list-group-item list-group-item-action deep-blue-gradient list-group-item-primary currency"
+                  id="ETH">Etherium</a>
                 <a href="#" class="list-group-item list-group-item-action list-group-item-secondary currency">Something
                   else</a>
                 <a href="#" class="list-group-item list-group-item-action list-group-item-success currency">And so
@@ -159,7 +150,19 @@
         </div>
 
         <div class="col-md-8" id="mainInfo">
-
+          <div class="row">
+            <div class="col">
+              <h1 id="coinTitle">
+              </h1>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col">
+              <h3 id="healthIndex">
+                <strong><span id="healthIndexValue"></span></strong>
+              </h3>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -177,36 +180,33 @@
 
 <script src="assets/js/script.js"></script>
 <script>
-
-  basicInfo = {
-    Bitcoin: "Main info blah-blah-1",
-    Etherium: "Main info blah-blah-2"
-  }
-
   $(document).on("click", ".currency", function () {
 
-    $("#mainInfo").empty()
-
+    //Generating Currency Name
     var currencyName = $(this).text();
+    var coinTitle = document.getElementById("coinTitle");
+    var coinSymbol = $(this).attr("id");
+    console.log(coinSymbol);
+    console.log(currencyName);
+    coinTitle.innerHTML = currencyName;
 
-    $("<h1>", {
-      text: currencyName,
-      appendTo: mainInfo
-    })
+    //Generating Health Index
+    var queryURL =
+      "https://www.alphavantage.co/query?function=CRYPTO_RATING&symbol=" + coinSymbol + "&apikey=JIS93MUHML1GONJ2";
+    $.ajax({
+      url: queryURL,
+      dataType: "json",
+      method: "GET"
+    }).then(function (response) {
+      healthRating = response;
+      console.log(healthRating["Crypto Rating (FCAS)"]["3. fcas rating"]);
+      var healthIndex = document.getElementById("healthIndex");
+      var healthIndexValue = healthRating["Crypto Rating (FCAS)"]["3. fcas rating"]
+      healthIndex.innerHTML = "Health Index: " + "<strong>" + healthIndexValue + "</strong>";
+    });
 
-    $("<p>", {
-      text: basicInfo[currencyName],
-      appendTo: mainInfo
-    })
-
-    fetch("https://api.nomics.com/v1/currencies/ticker?key=77a47350048c6105b642279cd8c59d85&ids=BTC,ETH,XRP&interval=1d,30d&convert=EUR", {
-  method: 'GET',
-  mode: 'no-cors', // If this doesn't work, replace with 'no-cors'
-}).then()
 
   });
-
-
 </script>
 
 </html>
