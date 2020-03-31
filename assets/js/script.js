@@ -1,4 +1,11 @@
 $(document).ready(function() {
+  $("#currencyList").on("change", function() {
+    alert(
+      $(this)
+        .find("option:selected")
+        .attr("id")
+    );
+  });
   $("#btcInput").keypress(function(event) {
     //event.preventDefault();
     var keycode = event.keyCode ? event.keyCode : event.which;
@@ -13,9 +20,11 @@ $(document).ready(function() {
       }).then(function(response) {
         console.log(response.USD);
         var one = parseInt($("#btcInput").val());
-        var currency = parseInt($("#currencyDisplay").val(response.USD * one));
-        var value = $("#currencyList option:selected");
-        alert(value.text());
+        // var currency = parseInt($("#currencyDisplay").val(response.USD * one));
+        var target = $("#currencyList option:selected").val();
+        if (target == "aud") {
+          console.log(response.AUD);
+        }
       });
     }
   });
