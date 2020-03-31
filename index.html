@@ -65,7 +65,7 @@
           <div class="row mb-2">
             <div class="col text-center">
               <p>
-                <h2>Currency Converter</h2>
+                <h1>Currency Converter</h1>
               </p>
               <div class="row">
                 <div class="col">
@@ -153,17 +153,22 @@
         </div>
 
         <div class="col-md-8" id="mainInfo">
-          <div class="row mb-2">
+          <div class="row">
             <div class="col">
-              <h1 id="coinTitle">
-              </h1>
+              <p>
+                <h1 id="coinTitle">
+                </h1>
+              </p>
             </div>
           </div>
           <div class="row">
             <div class="col">
-              <h3 id="healthIndex">
-                <strong><span id="healthIndexValue"></span></strong>
-              </h3>
+              <h3 id="fcasRating"></h3>
+              <h3 id="fcasScore"></h3>
+              <h3 id="marketMaturity"></h3>
+              <h3 id="lastRefreshed"></h3>
+            </div>
+            <div class="col">
             </div>
           </div>
         </div>
@@ -212,9 +217,22 @@
     }).then(function (response) {
       healthRating = response;
       console.log(healthRating["Crypto Rating (FCAS)"]["3. fcas rating"]);
-      var healthIndex = document.getElementById("healthIndex");
-      var healthIndexValue = healthRating["Crypto Rating (FCAS)"]["3. fcas rating"]
-      healthIndex.innerHTML = "Health Index: " + "<strong>" + healthIndexValue + "</strong>";
+
+      var fcasRating = document.getElementById("fcasRating");
+      var fcasScore = document.getElementById("fcasScore");
+      var marketMaturity = document.getElementById("marketMaturity");
+      var lastRefreshed = document.getElementById("lastRefreshed");
+
+      var fcasRatingValue = healthRating["Crypto Rating (FCAS)"]["3. fcas rating"];
+      var fcasScoreValue = healthRating["Crypto Rating (FCAS)"]["4. fcas score"];
+      var marketMaturityValue = healthRating["Crypto Rating (FCAS)"]["6. market maturity score"];
+      var lastRefreshedValue = healthRating["Crypto Rating (FCAS)"]["8. last refreshed"].split(" ")[0];
+
+
+      fcasRating.innerHTML = "FCAS Rating: " + "<strong>" + fcasRatingValue + "</strong>";
+      fcasScore.innerHTML = "FCAS Score: " + "<strong>" + fcasScoreValue + "</strong>";
+      marketMaturity.innerHTML = "Market Maturity Score: " + "<strong>" + marketMaturityValue + "</strong>";
+      lastRefreshed.innerHTML = "Last Refreshed Time: " + "<strong>" + lastRefreshedValue + " " + healthRating["Crypto Rating (FCAS)"]["9. timezone"] + "</strong>";
     });
 
 
