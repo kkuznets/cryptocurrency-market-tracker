@@ -1,6 +1,6 @@
 $(document).ready(function() {
   $("#btcInput").keypress(function(event) {
-    // event.preventDefault();
+    //event.preventDefault();
     var keycode = event.keyCode ? event.keyCode : event.which;
     if (keycode == "13") {
       var queryURL =
@@ -12,7 +12,10 @@ $(document).ready(function() {
         method: "GET"
       }).then(function(response) {
         console.log(response.USD);
-        $("#currencyDisplay").val(response.USD);
+        var one = parseInt($("#btcInput").val());
+        var currency = parseInt($("#currencyDisplay").val(response.USD * one));
+        var value = $("#currencyList option:selected");
+        alert(value.text());
       });
     }
   });
