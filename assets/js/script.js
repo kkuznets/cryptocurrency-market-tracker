@@ -1,11 +1,11 @@
 $(document).ready(function() {
-  $("#currencyList").on("change", function() {
+  /* $("#currencyList").on("change", function() {
     alert(
       $(this)
         .find("option:selected")
         .attr("id")
     );
-  });
+  });*/
   $("#btcInput").keypress(function(event) {
     //event.preventDefault();
     var keycode = event.keyCode ? event.keyCode : event.which;
@@ -18,9 +18,20 @@ $(document).ready(function() {
         dataType: "json",
         method: "GET"
       }).then(function(response) {
-        console.log(response.USD);
-        var one = parseInt($("#btcInput").val());
-        var currency = parseInt($("#currencyDisplay").val(response.USD * one));
+        var selectedCurrency = $("#currencyList")
+          .children("option:selected")
+          .val();
+
+        //console.log(response.USD);
+        var coinAmount = parseFloat($("#btcInput").val());
+        if (selectedCurrency == 1) {
+          //usdValue = parseInt(response.USD);
+          $("#currencyDisplay").val(parseFloat(response.USD) * coinAmount);
+        } else if (selectedCurrency == 2) {
+          $("#currencyDisplay").val(parseFloat(response.AUD) * coinAmount);
+        } else {
+          $("#currencyDisplay").val(parseFloat(response.EUR) * coinAmount);
+        }
       });
     }
   });
