@@ -24,3 +24,19 @@ $(document).on("click", "button", function() {
     localStorage.setItem(id, value);
   });
 });
+
+// Initialize and add the map
+function initMap() {
+  // The location of Sydney
+  var sydney = { lat: -33.865143, lng: 151.2099 };
+  // The map, centered at Sydney
+  var map = new google.maps.Map(document.getElementById("map"), {
+    zoom: 4,
+    center: sydney
+  });
+  // The marker, positioned at Sydney
+  var marker = new google.maps.Marker({
+    position: sydney,
+    map: map
+  });
+}
