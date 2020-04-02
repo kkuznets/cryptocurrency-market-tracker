@@ -6,7 +6,7 @@ $(document).ready(function() {
 
   $("#convertBtn").on("click", function() {
     if (!$(this).val()) {
-      displayMessage("error", "Please enter a Number");
+      displayMessage("error", "Please fill out this field");
     }
     var input = $("#inputGroup")
       .find(":selected")
