@@ -232,18 +232,30 @@ textarea.input1 + .shadow-input1 {
 }
 
 .social ul li {
-  padding: 0 5px 0 55px;
+  /* padding: 0 5px 0 55px;*/
   list-style: none;
   font-size: 40px;
+  display: inline;
 }
 
 .fa {
   color: #244bbc;
 }
 
+@media (max-width: 768px) {
+  .map {
+    width: 335px !important;
+    height: 440px;
+    background-color: grey;
+  }
+  li.mystyle1 {
+    padding-left: 0px !important;
+  }
+}
+
 @media (max-width: 425px) {
   .social ul li {
-    padding: 0 5px 0 35px;
+    /* padding: 0 5px 0 35px;*/
     margin: 0;
     display: inline;
     font-size: 30px;
@@ -253,6 +265,17 @@ textarea.input1 + .shadow-input1 {
   }
   i.fab.fa-instagram.mr-4.mb-4.peach-gradient.p-2.white-text.rounded {
     font-size: 30px !important;
+  }
+  .row {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: 0px;
+  }
+  li.mystyle1 {
+    padding-left: 45px !important;
   }
 }
 
@@ -278,8 +301,11 @@ i.fab.fa-instagram.mr-4.mb-4.peach-gradient.p-2.white-text.rounded {
 }
 
 .map {
-    width: 100%;
-    height: 200px;
-    background-color: grey;
-  }
+  width: 459px;
+  height: 440px;
+  background-color: grey;
+}
+
+li.mystyle1 {
+  padding-left: 90px;
 }
