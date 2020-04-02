@@ -52,7 +52,7 @@
   <!-- Main section -->
   <main id="netBackground">
     <div class="container-fluid">
-      <div class="row">
+      <div class="row" id="allInfo">
         <!-- Sidebar -->
         <div class="col-md-4">
           <!-- Search -->
@@ -65,7 +65,7 @@
           <div class="row mb-2">
             <div class="col text-center">
               <p>
-                <h1>Currency Converter</h1>
+                <h2>Currency Converter</h2>
               </p>
               <div class="row">
                 <div class="col">
@@ -116,7 +116,9 @@
 
             </div>
           </div>
-
+          <p>
+            <h2 class="text-center">Detailed Information</h2>
+          </p>
           <div class="row">
             <div class="col">
 
@@ -154,35 +156,7 @@
           </div>
         </div>
 
-        <div class="col-md-8" id="mainInfo">
-          <div class="row">
-            <div class="col">
-              <p>
-                <h1 id="coinTitle">
-                </h1>
-              </p>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-md-4">
-              <img id="img">
-            </div>
-            <div class="col-md-6 offset-md-2">
-              <h3 id="fcasRating"></h3>
-              <h3 id="marketMaturity"></h3>
-              <h3 id="lastRefreshed"></h3>
-            </div>
-          </div>
-          <div class="row my-4">
-            <div id="chart" class="col">
-              <!-- TradingView Widget BEGIN -->
-              <div class="tradingview-widget-container">
-                <div id="tradingview_af9df"></div>
-              </div>
-              <!-- TradingView Widget END -->
-            </div>
-          </div>
-        </div>
+
       </div>
     </div>
   </main>
@@ -208,20 +182,55 @@
     scale: 1.00,
     scaleMobile: 1.00,
     color: 0xff9c6a,
-    backgroundColor: 0x212121
+    backgroundColor: 0x131722
   })
   $(document).on("click", ".currency", function () {
+    $("#allInfo").append(`<div class="col-md-8" id="mainInfo">
+          <div class="row">
+            <p>
+              <h1 class="invisible"> Nothing
+              </h1>
+            </p>
+            <div class="col">
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-2 text-center">
+              <img id="img">
+            </div>
+            <div class="col-md-4 my-auto text-center">
+              <p>
+                <h2 id="coinTitle">
+                </h2>
+              </p>
+            </div>
+            <div class="col-md offset-md-1 my-auto">
+              <h4 id="fcasRating" class="align-middle"></h4>
+              <h4 id="marketMaturity" class="align-middle"></h4>
+              <h4 id="lastRefreshed" class="align-middle"></h4>
+            </div>
+          </div>
+          <div class="row my-4">
+            <div class="col">
+              <!-- TradingView Widget BEGIN -->
+              <div class="tradingview-widget-container" id="chart">
+
+              </div>
+              <!-- TradingView Widget END -->
+            </div>
+          </div>
+        </div>`)
 
     //Generating Currency Name
     var currencyName = $(this).text();
     var coinTitle = document.getElementById("coinTitle");
     var coinSymbol = $(this).attr("id");
-    var imgSrc = "assets/img/" + coinSymbol + ".png";
+    var imgSrc = "assets/img/icons/" + coinSymbol + ".svg";
 
     console.log(coinSymbol);
     console.log(currencyName);
-    coinTitle.innerHTML = currencyName;
-    $("#img").attr({ src: imgSrc, width: "150rem", height: "155rem" });
+    coinTitle.innerHTML = currencyName + " (" + coinSymbol + ")";
+    $("#img").attr({ src: imgSrc, width: "150rem", height: "150rem" });
 
     //Generating Health Index
     var queryURL =
@@ -247,6 +256,7 @@
       marketMaturity.innerHTML = "Market Maturity Score: " + "<strong>" + marketMaturityValue + "</strong>";
       lastRefreshed.innerHTML = "Last Refreshed Time: " + "<strong>" + lastRefreshedValue + "</strong>";
     });
+    $("#chart").append('<div id="tradingview_af9df"></div>')
 
     new TradingView.widget(
       {

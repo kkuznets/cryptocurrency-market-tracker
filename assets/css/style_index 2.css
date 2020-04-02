@@ -27,15 +27,16 @@ body {
 
 #netBackground {
   width: 100%;
-  height: 100vh;
-}
-
-@media only screen and (max-width: 768px) {
-  #netBackground {
-    height: auto;
-  }
+  height: 100%;
 }
 
 #tradingview_af9df {
+  width: 100%;
   height: 60vh;
+}
+
+.error {
+  color: red;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
 }
