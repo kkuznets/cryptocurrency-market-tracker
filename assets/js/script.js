@@ -6,8 +6,7 @@ $(document).ready(function () {
         .attr("id")
     );
   });*/
-  $("#btcInput").keypress(function (event) {
-    //event.preventDefault();
+  function convert(event) {
     var keycode = event.keyCode ? event.keyCode : event.which;
     if (keycode == "13") {
       var input = $("#inputGroup").find(':selected').attr('value');
@@ -35,5 +34,17 @@ $(document).ready(function () {
         }
       });
     }
+  }
+
+
+  $("#btcInput").keypress(function (event) {
+    //event.preventDefault();
+    convert(event);
   });
-});
+
+  $("#convert").click(function (event) {
+    convert(event);
+  });
+
+}
+);
