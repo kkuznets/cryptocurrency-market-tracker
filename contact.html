@@ -85,9 +85,7 @@
             <div class="row mt-5">
               <div class="social">
                 <div id="map" class="map my-4"></div>
-                <div class="col text-center">
-                  <strong><p>Follow us on</p></strong>
-                </div>
+
                 <ul>
                   <li class="mystyle1">
                     <a href="https://www.twitter.com/" target="_blank">
@@ -219,15 +217,18 @@
     // Initialize and add the map
     function initMap() {
       // The location of Sydney
-      var sydney = { lat: -33.865143, lng: 151.2099 };
+      var univerityOfSydney = {
+        lat: -33.89027800000003,
+        lng: 151.19148599999994
+      };
       // The map, centered at Sydney
       var map = new google.maps.Map(document.getElementById("map"), {
         zoom: 4,
-        center: sydney
+        center: univerityOfSydney
       });
       // The marker, positioned at Sydney
       var marker = new google.maps.Marker({
-        position: sydney,
+        position: univerityOfSydney,
         map: map
       });
     }

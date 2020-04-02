@@ -1,5 +1,13 @@
 $(document).ready(function() {
+  function displayMessage(type, message) {
+    msgDiv.textContent = message;
+    msgDiv.setAttribute("class", type);
+  }
+
   $("#convertBtn").on("click", function() {
+    if (!$(this).val()) {
+      displayMessage("error", "Please enter a Number");
+    }
     var input = $("#inputGroup")
       .find(":selected")
       .attr("value");
@@ -18,11 +26,12 @@ $(document).ready(function() {
         .val();
 
       var coinAmount = parseFloat($("#btcInput").val());
+
       if (selectedCurrency == 1) {
         $("#currencyDisplay").val(parseFloat(response.USD) * coinAmount);
       } else if (selectedCurrency == 2) {
         $("#currencyDisplay").val(parseFloat(response.AUD) * coinAmount);
-      } else {
+      } else if (selectedCurrency == 3) {
         $("#currencyDisplay").val(parseFloat(response.EUR) * coinAmount);
       }
     });
