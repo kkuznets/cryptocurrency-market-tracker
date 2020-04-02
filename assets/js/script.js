@@ -1,12 +1,13 @@
-$(document).ready(function() {
+$(document).ready(function () {
   function displayMessage(type, message) {
     msgDiv.textContent = message;
     msgDiv.setAttribute("class", type);
   }
 
-  $("#convertBtn").on("click", function() {
-    if (!$(this).val()) {
-      displayMessage("error", "Please fill out this field");
+  $("#convertBtn").on("click", function () {
+    if (!$("#btcInput").val()) {
+      $("#btcInput").attr("placeholder", "Please, fill out this field!");
+      return;
     }
     var input = $("#inputGroup")
       .find(":selected")
@@ -20,7 +21,7 @@ $(document).ready(function() {
       url: queryURL,
       dataType: "json",
       method: "GET"
-    }).then(function(response) {
+    }).then(function (response) {
       var selectedCurrency = $("#currencyList")
         .children("option:selected")
         .val();
