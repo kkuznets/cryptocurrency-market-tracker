@@ -74,9 +74,9 @@
                       <div class="input-group-prepend">
                         <span class="input-group-text bg-transparent text-light">From</span>
                         <select class="browser-default custom-select bg-transparent rounded-0 text-light"
-                          style="border-left: 0;" id="inputGroupSelect03" aria-label="Example select with button addon">
-                          <option selected>Bitcoin</option>
-                          <option value="1">Etherium</option>
+                          style="border-left: 0;" id="inputGroup" aria-label="Example select with button addon">
+                          <option value="BTC" selected>Bitcoin</option>
+                          <option value="ETH">Etherium</option>
                           <option value="2">Two</option>
                           <option value="3">Three</option>
                         </select>
@@ -86,6 +86,8 @@
                     </div>
 
                     <div class="input-group">
+                      <button id="convert" class="peach-gradient lighten-3 text-dark rounded-left"
+                        style="border-right: 0;">Convert</button>
                       <input type="text" id="currencyDisplay" class="form-control bg-transparent text-light"
                         aria-label="Dollar amount (with dot and two decimal places)">
                       <div class="input-group-append">
@@ -93,7 +95,7 @@
                         <select class="browser-default custom-select bg-transparent text-light"
                           style="border-left: 0; border-top-left-radius: 0px; border-bottom-left-radius: 0px"
                           id="currencyList" aria-label="Example select with button addon">
-                          <option id="usd" value = "1" selected>USD</option>
+                          <option id="usd" value="1" selected>USD</option>
                           <option id="aud" value="2">AUD</option>
                           <option id="eur" value="3">EUR</option>
 
@@ -169,6 +171,7 @@
               <h3 id="lastRefreshed"></h3>
             </div>
             <div class="col">
+
             </div>
           </div>
         </div>

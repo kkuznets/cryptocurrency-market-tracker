@@ -143,6 +143,36 @@
                 </ul>
               </div>
             </div>
+            <div class="row">
+              <div id="map" class="map"></div>
+              <script>
+                // Initialize and add the map
+                function initMap() {
+                  // The location of Sydney
+                  var sydney = { lat: -33.865143, lng: 151.2099 };
+                  // The map, centered at Sydney
+                  var map = new google.maps.Map(
+                    document.getElementById("map"),
+                    { zoom: 4, center: sydney }
+                  );
+                  // The marker, positioned at Sydney
+                  var marker = new google.maps.Marker({
+                    position: sydney,
+                    map: map
+                  });
+                }
+              </script>
+              <!--Load the API from the specified URL
+              * The async attribute allows the browser to render the page while the API loads
+              * The key parameter will contain your own API key
+              * The callback parameter executes the initMap() function
+              -->
+              <script
+                async
+                defer
+                src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB_x5otEvwwZ1bAPnNdJr3wmtM3IQweXnA&callback=initMap"
+              ></script>
+            </div>
           </div>
 
           <div class="offset-md-1 col-md-6 offset-md-1 my-5">
