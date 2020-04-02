@@ -233,7 +233,6 @@ textarea.input1 + .shadow-input1 {
 
 .social ul li {
   padding: 0 5px 0 55px;
-  margin: 0;
   list-style: none;
   font-size: 40px;
 }
@@ -276,4 +275,11 @@ textarea.input1 + .shadow-input1 {
 }
 i.fab.fa-instagram.mr-4.mb-4.peach-gradient.p-2.white-text.rounded {
   font-size: 47px;
+}
+
+.map {
+    width: 100%;
+    height: 200px;
+    background-color: grey;
+  }
 }

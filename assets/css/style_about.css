@@ -22,6 +22,7 @@ body {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
     margin: 8px;
     background-color: black;
+    min-height: 100%;
   }
   
   .about-section {
@@ -30,7 +31,7 @@ body {
   }
   
   .container {
-    padding: 0 16px;
+    padding: 16px 16px 0px 16px;
   }
   
   .container::after, .row::after {
@@ -47,6 +48,11 @@ body {
   padding-top: 5px;
   margin-top: auto;
   }
+
+  .list-group-item {
+    padding-top: 16px;
+    padding-bottom: 16px;
+  }
   
   @media screen and (max-width: 650px) {
     .column {
@@ -55,3 +61,15 @@ body {
     }
   }
   
+  .button {
+    position: absolute; 
+    bottom:16px; 
+  }
+
+  .intro-card {
+    margin-bottom: 10px;
+  }
+
+  .intro-img {
+    width:100%;
+  }
