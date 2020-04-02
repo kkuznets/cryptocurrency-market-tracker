@@ -77,8 +77,9 @@
                           style="border-left: 0;" id="inputGroup" aria-label="Example select with button addon">
                           <option value="BTC" selected>Bitcoin</option>
                           <option value="ETH">Etherium</option>
-                          <option value="2">Two</option>
-                          <option value="3">Three</option>
+                          <option value="BCH">Bitcoin Cash</option>
+                          <option value="USDT">Tether</option>
+                          <option value="LTC">Litecoin</option>
                         </select>
                       </div>
                       <input type="number" id="btcInput" class="form-control bg-transparent text-light"
@@ -119,17 +120,15 @@
               <div class="list-group">
                 <a href="#" class="list-group-item list-group-item-action sunny-morning-gradient currency"
                   id="BTC">Bitcoin</a>
-
                 <a href="#"
                   class="list-group-item list-group-item-action deep-blue-gradient list-group-item-primary currency"
                   id="ETH">Etherium</a>
-                <a href="#" class="list-group-item list-group-item-action list-group-item-secondary currency">Something
-                  else</a>
-                <a href="#" class="list-group-item list-group-item-action list-group-item-success currency">And so
-                  on</a>
-                <a href="#" class="list-group-item list-group-item-action list-group-item-danger currency">This is a
-                  danger list
-                  group item</a>
+                <a href="#" class="list-group-item list-group-item-action list-group-item-secondary currency"
+                  id="BCH">Bitcoin Cash</a>
+                <a href="#" class="list-group-item list-group-item-action list-group-item-success currency"
+                  id="USDT">Tether</a>
+                <a href="#" class="list-group-item list-group-item-action list-group-item-danger currency"
+                  id="LTC">Litecoin</a>
                 <a href="#" class="list-group-item list-group-item-action list-group-item-warning currency">This is a
                   warning
                   list group item</a>
@@ -157,14 +156,22 @@
             </div>
           </div>
           <div class="row">
-            <div class="col">
+            <div class="col-md-3">
+            </div>
+            <div class="col-md-6 offset-md-3">
               <h3 id="fcasRating"></h3>
               <h3 id="fcasScore"></h3>
               <h3 id="marketMaturity"></h3>
               <h3 id="lastRefreshed"></h3>
             </div>
-            <div class="col">
-
+          </div>
+          <div class="row">
+            <div id="chart" class="col">
+              <!-- TradingView Widget BEGIN -->
+              <div class="tradingview-widget-container">
+                <div id="tradingview_af9df"></div>
+              </div>
+              <!-- TradingView Widget END -->
             </div>
           </div>
         </div>
@@ -181,6 +188,8 @@
   src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/js/bootstrap.min.js"></script>
 <!-- MDB core JavaScript -->
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.14.1/js/mdb.min.js"></script>
+
+<script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>
 
 <script src="assets/js/script.js"></script>
 <script>
@@ -230,6 +239,24 @@
       marketMaturity.innerHTML = "Market Maturity Score: " + "<strong>" + marketMaturityValue + "</strong>";
       lastRefreshed.innerHTML = "Last Refreshed Time: " + "<strong>" + lastRefreshedValue + " " + healthRating["Crypto Rating (FCAS)"]["9. timezone"] + "</strong>";
     });
+
+    new TradingView.widget(
+      {
+        "autosize": true,
+        "symbol": "CRYPTOCAP:" + coinSymbol,
+        "interval": "D",
+        "timezone": "Etc/UTC",
+        "theme": "dark",
+        "style": "1",
+        "locale": "en",
+        "toolbar_bg": "#333333",
+        "enable_publishing": false,
+        "hide_legend": true,
+        "allow_symbol_change": true,
+        "save_image": false,
+        "container_id": "tradingview_af9df"
+      }
+    );
 
 
   });
