@@ -77,9 +77,13 @@
                           style="border-left: 0;" id="inputGroup" aria-label="Example select with button addon">
                           <option value="BTC" selected>Bitcoin</option>
                           <option value="ETH">Etherium</option>
-                          <option value="BCH">Bitcoin Cash</option>
+                          <option value="XRP">XRP</option>
                           <option value="USDT">Tether</option>
                           <option value="LTC">Litecoin</option>
+                          <option value="EOS">EOS</option>
+                          <option value="BNB">Binance Coin</option>
+                          <option value="BSV">Bitcoin SV</option>
+                          <option value="XLM">Stellar</option>
                         </select>
                       </div>
                       <input type="text" id="btcInput" class="form-control bg-transparent text-light"
@@ -125,29 +129,33 @@
               </div>
               <!-- Currencies List -->
               <div class="list-group">
-                <a href="#" class="list-group-item list-group-item-action sunny-morning-gradient currency"
+                <a href="#"
+                  class="list-group-item list-group-item-action list-group-item-success sunny-morning-gradient currency"
                   id="BTC">Bitcoin</a>
                 <a href="#"
-                  class="list-group-item list-group-item-action deep-blue-gradient list-group-item-primary currency"
+                  class="list-group-item list-group-item-action list-group-item-success winter-neva-gradient currency"
                   id="ETH">Etherium</a>
-                <a href="#" class="list-group-item list-group-item-action list-group-item-secondary currency"
-                  id="BCH">Bitcoin Cash</a>
-                <a href="#" class="list-group-item list-group-item-action list-group-item-success currency"
+                <a href="#"
+                  class="list-group-item list-group-item-action list-group-item-success heavy-rain-gradient currency"
+                  id="XRP">XRP</a>
+                <a href="#"
+                  class="list-group-item list-group-item-action list-group-item-success tempting-azure-gradient currency"
                   id="USDT">Tether</a>
-                <a href="#" class="list-group-item list-group-item-action list-group-item-danger currency"
+                <a href="#"
+                  class="list-group-item list-group-item-action list-group-item-success rainy-ashville-gradient currency"
                   id="LTC">Litecoin</a>
-                <a href="#" class="list-group-item list-group-item-action list-group-item-warning currency">This is a
-                  warning
-                  list group item</a>
-                <a href="#" class="list-group-item list-group-item-action list-group-item-info currency">This is a info
-                  list
-                  group item</a>
-                <a href="#" class="list-group-item list-group-item-action list-group-item-light currency">This is a
-                  light list
-                  group item</a>
-                <a href="#" class="list-group-item list-group-item-action list-group-item-dark currency">This is a dark
-                  list
-                  group item</a>
+                <a href="#"
+                  class="list-group-item list-group-item-action list-group-item-success cloudy-knoxville-gradient currency"
+                  id="EOS">EOS</a>
+                <a href="#"
+                  class="list-group-item list-group-item-action list-group-item-success juicy-peach-gradient currency"
+                  id="BNB">Binance Coin</a>
+                <a href="#"
+                  class="list-group-item list-group-item-action list-group-item-success warm-flame-gradient currency"
+                  id="BSV">Bitcoin SV</a>
+                <a href="#"
+                  class="list-group-item list-group-item-action list-group-item-success deep-blue-gradient currency"
+                  id="XLM">Stellar</a>
               </div>
             </div>
           </div>
@@ -163,16 +171,16 @@
             </div>
           </div>
           <div class="row">
-            <div class="col-md-3">
+            <div class="col-md-4">
+              <img id="img">
             </div>
-            <div class="col-md-6 offset-md-3">
+            <div class="col-md-6 offset-md-2">
               <h3 id="fcasRating"></h3>
-              <h3 id="fcasScore"></h3>
               <h3 id="marketMaturity"></h3>
               <h3 id="lastRefreshed"></h3>
             </div>
           </div>
-          <div class="row">
+          <div class="row my-4">
             <div id="chart" class="col">
               <!-- TradingView Widget BEGIN -->
               <div class="tradingview-widget-container">
@@ -215,9 +223,12 @@
     var currencyName = $(this).text();
     var coinTitle = document.getElementById("coinTitle");
     var coinSymbol = $(this).attr("id");
+    var imgSrc = "assets/img/" + coinSymbol + ".png";
+
     console.log(coinSymbol);
     console.log(currencyName);
     coinTitle.innerHTML = currencyName;
+    $("#img").attr({ src: imgSrc, width: "150rem", height: "150rem" });
 
     //Generating Health Index
     var queryURL =
@@ -231,20 +242,17 @@
       console.log(healthRating["Crypto Rating (FCAS)"]["3. fcas rating"]);
 
       var fcasRating = document.getElementById("fcasRating");
-      var fcasScore = document.getElementById("fcasScore");
       var marketMaturity = document.getElementById("marketMaturity");
       var lastRefreshed = document.getElementById("lastRefreshed");
 
       var fcasRatingValue = healthRating["Crypto Rating (FCAS)"]["3. fcas rating"];
-      var fcasScoreValue = healthRating["Crypto Rating (FCAS)"]["4. fcas score"];
       var marketMaturityValue = healthRating["Crypto Rating (FCAS)"]["6. market maturity score"];
       var lastRefreshedValue = healthRating["Crypto Rating (FCAS)"]["8. last refreshed"].split(" ")[0];
 
 
       fcasRating.innerHTML = "FCAS Rating: " + "<strong>" + fcasRatingValue + "</strong>";
-      fcasScore.innerHTML = "FCAS Score: " + "<strong>" + fcasScoreValue + "</strong>";
       marketMaturity.innerHTML = "Market Maturity Score: " + "<strong>" + marketMaturityValue + "</strong>";
-      lastRefreshed.innerHTML = "Last Refreshed Time: " + "<strong>" + lastRefreshedValue + " " + healthRating["Crypto Rating (FCAS)"]["9. timezone"] + "</strong>";
+      lastRefreshed.innerHTML = "Last Refreshed Time: " + "<strong>" + lastRefreshedValue + "</strong>";
     });
 
     new TradingView.widget(
