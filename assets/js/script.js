@@ -1,4 +1,4 @@
-$(document).ready(function() {
+$(document).ready(function () {
   /* $("#currencyList").on("change", function() {
     alert(
       $(this)
@@ -6,18 +6,19 @@ $(document).ready(function() {
         .attr("id")
     );
   });*/
-  $("#btcInput").keypress(function(event) {
+  $("#btcInput").keypress(function (event) {
     //event.preventDefault();
     var keycode = event.keyCode ? event.keyCode : event.which;
     if (keycode == "13") {
+      var input = $("#inputGroup").find(':selected').attr('value');
       var queryURL =
-        "https://min-api.cryptocompare.com/data/price?fsym=BTC&tsyms=USD,EUR,AUD" +
+        "https://min-api.cryptocompare.com/data/price?fsym=" + input + "&tsyms=USD,EUR,AUD" +
         "&api_key=4032fc9713c205be9d015deab9bbbce1bb323fc207e32e773df9be829a3aa93f";
       $.ajax({
         url: queryURL,
         dataType: "json",
         method: "GET"
-      }).then(function(response) {
+      }).then(function (response) {
         var selectedCurrency = $("#currencyList")
           .children("option:selected")
           .val();
