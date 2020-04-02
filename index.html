@@ -69,7 +69,7 @@
               </p>
               <div class="row">
                 <div class="col">
-                  <div class="converter">
+                  <div class="converter mb-4">
                     <div class="input-group mb-2">
                       <div class="input-group-prepend">
                         <span class="input-group-text bg-transparent text-light">From</span>
@@ -86,7 +86,7 @@
                           <option value="XLM">Stellar</option>
                         </select>
                       </div>
-                      <input type="text" id="btcInput" class="form-control bg-transparent text-light"
+                      <input type="number" id="btcInput" class="form-control bg-transparent text-light"
                         aria-label="Dollar amount (with dot and two decimal places)">
                     </div>
 
@@ -107,6 +107,7 @@
                         </select>
                       </div>
                     </div>
+                    <div id="msgDiv"></div>
                   </div>
                 </div>
               </div>
@@ -118,15 +119,7 @@
 
           <div class="row">
             <div class="col">
-              <!-- Search -->
-              <div class="input-group md-form form-sm form-2 pl-0">
-                <input class="form-control my-0 py-1 amber-border" id="Search" type="text" placeholder="Search"
-                  aria-label="Search">
-                <div class="input-group-append">
-                  <button class="input-group-text peach-gradient lighten-3 text-black" id="searchBtn"><i
-                      class="fas fa-search text-grey" aria-hidden="true"></i></button>
-                </div>
-              </div>
+             
               <!-- Currencies List -->
               <div class="list-group">
                 <a href="#"
