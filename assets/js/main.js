@@ -99,7 +99,7 @@ $(document).ready(function () {
     var currencyName = $(this).text();
     var coinTitle = document.getElementById("coinTitle");
     var coinSymbol = $(this).attr("id");
-    var imgSrc = "assets/img/icons/" + coinSymbol + ".svg";
+    var imgSrc = "assets/img/icons/color/" + coinSymbol + ".svg";
     coinTitle.innerHTML = currencyName + " (" + coinSymbol + ")";
     $("#img").attr({ src: imgSrc, width: "144rem", height: "144rem" });
 
