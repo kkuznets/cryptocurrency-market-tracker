@@ -87,7 +87,7 @@ $(document).ready(function () {
           <div class="row">
             <div class="col">
               <!-- TradingView Widget BEGIN -->
-              <div class="tradingview-widget-container" id="chart">
+              <div class="tradingview-widget-container pb-2" id="chart">
 
               </div>
               <!-- TradingView Widget END -->
