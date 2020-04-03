@@ -69,7 +69,8 @@ $(document).ready(function () {
             </div>
           </div>
           <div class="row mb-5">
-            <div class="col-lg-3 my-auto text-center" id="imgCoin">
+            <div class="col-lg-3 my-auto text-center">
+              <img id="img" src="imgSrc">
             </div>
             <div class="col-lg-4 my-auto mx-auto text-center">
               <p>
@@ -98,11 +99,8 @@ $(document).ready(function () {
     var currencyName = $(this).text();
     var coinTitle = document.getElementById("coinTitle");
     var coinSymbol = $(this).attr("id");
-    var imgSrc = "assets/img/icons/color/" + coinSymbol + ".svg";
+    var imgSrc = "assets/img/icons/" + coinSymbol + ".svg";
     coinTitle.innerHTML = currencyName + " (" + coinSymbol + ")";
-
-    // Adding Currency Icon
-    $("#imgCoin").append(`<img id="img"></img>`);
     $("#img").attr({ src: imgSrc, width: "144rem", height: "144rem" });
 
     //Generating Health Index
