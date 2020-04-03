@@ -138,3 +138,30 @@ body {
     rgba(111, 111, 111, 1) 100%
   );
 }
+
+#kirill {
+  background: rgb(255, 212, 111);
+  background: linear-gradient(
+    90deg,
+    rgba(255, 212, 111, 1) 0%,
+    rgba(255, 181, 108, 1) 100%
+  );
+}
+
+#prakriti {
+  background: rgb(255, 181, 108);
+  background: linear-gradient(
+    90deg,
+    rgba(255, 181, 108, 1) 0%,
+    rgba(255, 143, 104, 1) 100%
+  );
+}
+
+#midz {
+  background: rgb(255, 143, 104);
+  background: linear-gradient(
+    90deg,
+    rgba(255, 143, 104, 1) 0%,
+    rgba(253, 100, 98, 1) 100%
+  );
+}
