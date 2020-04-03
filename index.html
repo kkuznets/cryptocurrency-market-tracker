@@ -72,9 +72,10 @@
                   <div class="converter mb-4">
                     <div class="input-group mb-2">
                       <div class="input-group-prepend">
-                        <span class="input-group-text bg-transparent text-light">From</span>
-                        <select class="browser-default custom-select bg-transparent rounded-0 text-light"
-                          style="border-left: 0;" id="currencyChoice" aria-label="Currency to convert from">
+                        <span class="input-group-text text-light" style=" background-color: #131722;">From</span>
+                        <select class="browser-default custom-select rounded-0 text-light"
+                          style="border-left: 0; background-color: #131722;" id="currencyChoice"
+                          aria-label="Currency to convert from">
                           <option value="BTC" selected>BTC</option>
                           <option value="ETH">ETH</option>
                           <option value="XRP">XRP</option>
@@ -90,19 +91,20 @@
                           <option value="EUR">EUR</option>
                         </select>
                       </div>
-                      <input type="number" id="currencyInput" class="form-control bg-transparent text-light"
-                        aria-label="Currency to convert to" required>
+                      <input type="number" id="currencyInput" class="form-control text-light"
+                        style=" background-color: #131722;" aria-label="Currency to convert to" required>
                       <button id="convertBtn" class="rounded-right"
-                        style="border-left: 0; width: 5.35rem;">Convert</button>
+                        style="border-left: 0; width: 5.3rem;">Convert</button>
                     </div>
                     <div class="input-group">
                       <button id="copyBtn" class="rounded-left" style="border-right: 0; width: 3.9rem;">Copy</button>
-                      <input type="text" id="currencyOutput" class="form-control bg-transparent text-light disabled"
+                      <input type="text" id="currencyOutput" class="form-control text-light disabled"
+                        style=" background-color: #131722;"
                         aria-label="Dollar amount (with dot and two decimal places)">
                       <div class="input-group-append">
-                        <span class="input-group-text bg-transparent text-light">To</span>
-                        <select class="browser-default custom-select bg-transparent text-light"
-                          style="border-left: 0; border-top-left-radius: 0px; border-bottom-left-radius: 0px"
+                        <span class="input-group-text text-light" style=" background-color: #131722;">To</span>
+                        <select class="browser-default custom-select text-light"
+                          style="border-left: 0; border-top-left-radius: 0px; border-bottom-left-radius: 0px; background-color: #131722;"
                           id="currencyList" aria-label="Example select with button addon">
                           <option value="USD" selected>USD</option>
                           <option value="AUD">AUD</option>
