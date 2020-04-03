@@ -100,9 +100,9 @@
                         <select class="browser-default custom-select bg-transparent text-light"
                           style="border-left: 0; border-top-left-radius: 0px; border-bottom-left-radius: 0px"
                           id="currencyList" aria-label="Example select with button addon">
-                          <option id="usd" value="1" selected>USD</option>
-                          <option id="aud" value="2">AUD</option>
-                          <option id="eur" value="3">EUR</option>
+                          <option id="usd" value="USD" selected>USD</option>
+                          <option id="aud" value="AUD">AUD</option>
+                          <option id="eur" value="EUR">EUR</option>
 
                         </select>
                       </div>
@@ -257,7 +257,7 @@
 
       fcasRating.innerHTML = "FCAS Rating: " + "<strong>" + fcasRatingValue + "</strong>";
       marketMaturity.innerHTML = "Market Maturity Score: " + "<strong>" + marketMaturityValue + "</strong>";
-      lastRefreshed.innerHTML = "Last Refreshed Time: " + "<strong>" + lastRefreshedValue + "</strong>";
+      lastRefreshed.innerHTML = "Last Refreshed: " + "<strong>" + lastRefreshedValue + "</strong>";
     });
     $("#chart").append('<div id="tradingview_af9df"></div>')
 

@@ -12,10 +12,13 @@ $(document).ready(function () {
     var input = $("#inputGroup")
       .find(":selected")
       .attr("value");
+    var output = $("#currencyList")
+      .find(":selected")
+      .attr("value");
     var queryURL =
       "https://min-api.cryptocompare.com/data/price?fsym=" +
       input +
-      "&tsyms=USD,EUR,AUD" +
+      "&tsyms=" + output +
       "&api_key=4032fc9713c205be9d015deab9bbbce1bb323fc207e32e773df9be829a3aa93f";
     $.ajax({
       url: queryURL,
@@ -27,14 +30,9 @@ $(document).ready(function () {
         .val();
 
       var coinAmount = parseFloat($("#btcInput").val());
+      $("#currencyDisplay").val(parseFloat(response[output]) * coinAmount);
 
-      if (selectedCurrency == 1) {
-        $("#currencyDisplay").val(parseFloat(response.USD) * coinAmount);
-      } else if (selectedCurrency == 2) {
-        $("#currencyDisplay").val(parseFloat(response.AUD) * coinAmount);
-      } else if (selectedCurrency == 3) {
-        $("#currencyDisplay").val(parseFloat(response.EUR) * coinAmount);
-      }
+
     });
   });
 
