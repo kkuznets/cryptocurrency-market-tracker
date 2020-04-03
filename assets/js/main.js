@@ -1,5 +1,9 @@
 $(document).ready(function () {
 
+  // Initialize animation on scroll API
+  new WOW().init();
+
+  // Initialize background animation (Vanta.js API)
   VANTA.NET({
     el: "#netBackground",
     mouseControls: true,
@@ -10,6 +14,7 @@ $(document).ready(function () {
     backgroundColor: 0x131722
   })
 
+  // Convert Currencies Function
   $("#convertBtn").on("click", function () {
     if (!$("#currencyInput").val()) {
       $("#currencyOutput").val("");
@@ -35,7 +40,9 @@ $(document).ready(function () {
       $("#currencyOutput").val(parseFloat(response[output]) * coinAmount);
     });
   });
+  // !Convert Currencies Function
 
+  // Copy Converted Results Function
   $("#copyBtn").on("click", function () {
     var copyText = document.getElementById("currencyOutput");
 
@@ -43,12 +50,16 @@ $(document).ready(function () {
     copyText.setSelectionRange(0, 99999);
     document.execCommand("copy");
   });
+  // !Copy Converted Results Function
 
 
-
+  // Generate and show additional info for each currency Function
   $(document).on("click", ".currency", function () {
+
+    // Adding Elements to HMTL
     $("#mainInfo").empty();
     $("#mainInfo").append(`
+    <div class="wow animated fadeIn">
           <div class="row">
             <p>
               <h1 class="invisible"> Nothing
@@ -81,16 +92,14 @@ $(document).ready(function () {
               </div>
               <!-- TradingView Widget END -->
             </div>
-          </div>`)
+          </div>
+    </div>`)
 
     //Generating Currency Name
     var currencyName = $(this).text();
     var coinTitle = document.getElementById("coinTitle");
     var coinSymbol = $(this).attr("id");
     var imgSrc = "assets/img/icons/color/" + coinSymbol + ".svg";
-
-    console.log(coinSymbol);
-    console.log(currencyName);
     coinTitle.innerHTML = currencyName + " (" + coinSymbol + ")";
     $("#img").attr({ src: imgSrc, width: "144rem", height: "144rem" });
 
@@ -103,7 +112,6 @@ $(document).ready(function () {
       method: "GET"
     }).then(function (response) {
       healthRating = response;
-      console.log(healthRating["Crypto Rating (FCAS)"]["3. fcas rating"]);
 
       var fcasRating = document.getElementById("fcasRating");
       var marketMaturity = document.getElementById("marketMaturity");
@@ -119,26 +127,26 @@ $(document).ready(function () {
       lastRefreshed.innerHTML = "Last Refreshed: " + "<strong>" + lastRefreshedValue + "</strong>";
     });
     $("#chart").empty();
-    $("#chart").append('<div id="tradingview_af9df"></div>')
+    $("#chart").append('<div id="tradingview_af9df" class="wow animated zoomIn"></div>')
 
+    // Generating Stock Market Chart
     new TradingView.widget(
       {
         "autosize": true,
         "symbol": "CRYPTOCAP:" + coinSymbol,
-        "interval": "D",
+        "interval": "1D",
         "timezone": "Etc/UTC",
         "theme": "dark",
         "style": "1",
         "locale": "en",
         "toolbar_bg": "#333333",
         "enable_publishing": false,
-        "hide_legend": true,
-        "allow_symbol_change": true,
+        "hide_legend": false,
+        "allow_symbol_change": false,
         "save_image": false,
         "container_id": "tradingview_af9df"
       }
     );
-
-
   });
+  // Generate and show additional info for each currency Function
 });
