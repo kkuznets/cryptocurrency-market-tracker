@@ -4,33 +4,38 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Converter</title>
+  <meta name="description" content="Cryptocurrencies converter and market tracker">
+  <meta name="keywords" content="Crypto, Cryptocurrency, Stock Market, Bitcoin">
+  <meta name="author" content="Kirill Kuznetsov, Prakriti Rajbhandari, MidzSreenivasan">
+  <title>COINCHANGE</title>
   <!-- Font Awesome -->
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css?family=Indie+Flower|Krona+One|Pacifico&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
   <!-- Bootstrap core CSS -->
   <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
   <!-- Material Design Bootstrap -->
   <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.14.1/css/mdb.min.css" rel="stylesheet">
+  <!-- Animate CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
   <!-- Custom Styles -->
-  <link rel="stylesheet" href="assets/css/style_index.css" />
-
+  <link rel="stylesheet" href="assets/css/main.css" />
+  <!-- Background Scripts -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/100/three.min.js"></script>
   <script src="https://www.vantajs.com/dist/vanta.net.min.js"></script>
+  <!-- Favicon -->
+  <link rel="icon" href="assets/img/favicon.ico" type="image/x-icon">
 </head>
 
-<body class="bg-dark text-light">
+<body id="netBackground" class="text-light" style="background-color: #131722;">
 
-  <!--Navbar-->
+  <!-- Navbar -->
   <nav class="navbar navbar-expand-lg navbar-light peach-gradient lighten-3 py-4 font-weight-bold z-depth-1">
-    <a class="navbar-brand" href="index.html">CO<span class="text-white">IN</span>CHANGE</a>
+    <a class="navbar-brand" href="index.html" style="color: #131722;">CO<span class="text-white">IN</span>CHANGE</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
       aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
-
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav ml-auto">
         <li class="nav-item active">
@@ -39,7 +44,6 @@
         <li class="nav-item">
           <a class="nav-link" href="about.html">About </a>
         </li>
-
         <li class="nav-item ">
           <a class="nav-link" href="contact.html">Contact <span class="sr-only">(current)</span>
           </a>
@@ -47,146 +51,153 @@
       </ul>
     </div>
   </nav>
-  <!--/.Navbar-->
+  <!-- /Navbar -->
 
-  <!-- Main section -->
-  <main id="netBackground">
+  <!-- Main Section -->
+  <main>
     <div class="container-fluid">
-      <div class="row">
-        <!-- Sidebar -->
-        <div class="col-md-4">
-          <!-- Search -->
-          <div class="row">
-            <div class="col">
-            </div>
-          </div>
+      <div class="row" id="allInfo">
 
-          <!-- Announcement -->
+        <!-- Sidebar -->
+        <div class="col-lg-4 animated fadeInLeft">
+
+          <!-- Converter -->
           <div class="row mb-2">
             <div class="col text-center">
               <p>
-                <h1>Currency Converter</h1>
+                <h2>Currency Converter</h2>
               </p>
               <div class="row">
                 <div class="col">
                   <div class="converter mb-4">
                     <div class="input-group mb-2">
                       <div class="input-group-prepend">
-                        <span class="input-group-text bg-transparent text-light">From</span>
-                        <select class="browser-default custom-select bg-transparent rounded-0 text-light"
-                          style="border-left: 0;" id="inputGroup" aria-label="Example select with button addon">
-                          <option value="BTC" selected>Bitcoin</option>
-                          <option value="ETH">Etherium</option>
+                        <span class="input-group-text text-light" style=" background-color: #131722;">From</span>
+                        <select class="browser-default custom-select rounded-0 text-light"
+                          style="border-left: 0; background-color: #131722;" id="currencyChoice"
+                          aria-label="Currency to convert from">
+                          <option value="BTC" selected>BTC</option>
+                          <option value="ETH">ETH</option>
                           <option value="XRP">XRP</option>
-                          <option value="USDT">Tether</option>
-                          <option value="LTC">Litecoin</option>
+                          <option value="USDT">USDT</option>
+                          <option value="BCH">BCH</option>
+                          <option value="BSV">BSV</option>
+                          <option value="LTC">LTC</option>
                           <option value="EOS">EOS</option>
-                          <option value="BNB">Binance Coin</option>
-                          <option value="BSV">Bitcoin SV</option>
-                          <option value="XLM">Stellar</option>
+                          <option value="BNB">BNB</option>
+                          <option value="XTZ">XTZ</option>
+                          <option value="USD">USD</option>
+                          <option value="AUD">AUD</option>
+                          <option value="EUR">EUR</option>
                         </select>
                       </div>
-                      <input type="number" id="btcInput" class="form-control bg-transparent text-light"
-                        aria-label="Dollar amount (with dot and two decimal places)" required>
+                      <input type="number" id="currencyInput" class="form-control text-light"
+                        style=" background-color: #131722;" aria-label="Amount to convert" required>
+                      <button id="convertBtn" class="rounded-right"
+                        style="border-left: 0; width: 5.3rem;">Convert</button>
                     </div>
-                    <div id="msgDiv"></div>
                     <div class="input-group">
-                      <button id="convertBtn" class="peach-gradient lighten-3 text-dark rounded-left"
-                        style="border-right: 0;">Convert</button>
-                      <input type="text" id="currencyDisplay" class="form-control bg-transparent text-light"
-                        aria-label="Dollar amount (with dot and two decimal places)">
+                      <button id="copyBtn" class="rounded-left" style="border-right: 0; width: 3.9rem;">Copy</button>
+                      <input type="text" id="currencyOutput" class="form-control text-light disabled"
+                        style=" background-color: #131722;" aria-label="Converted value">
                       <div class="input-group-append">
-                        <span class="input-group-text bg-transparent text-light">To</span>
-                        <select class="browser-default custom-select bg-transparent text-light"
-                          style="border-left: 0; border-top-left-radius: 0px; border-bottom-left-radius: 0px"
-                          id="currencyList" aria-label="Example select with button addon">
-                          <option id="usd" value="1" selected>USD</option>
-                          <option id="aud" value="2">AUD</option>
-                          <option id="eur" value="3">EUR</option>
-
+                        <span class="input-group-text text-light" style=" background-color: #131722;">To</span>
+                        <select class="browser-default custom-select text-light"
+                          style="border-left: 0; border-top-left-radius: 0px; border-bottom-left-radius: 0px; background-color: #131722;"
+                          id="currencyList" aria-label="Currency to convert to">
+                          <option value="USD" selected>USD</option>
+                          <option value="AUD">AUD</option>
+                          <option value="EUR">EUR</option>
+                          <option value="BTC">BTC</option>
+                          <option value="ETH">ETH</option>
+                          <option value="XRP">XRP</option>
+                          <option value="USDT">USDT</option>
+                          <option value="BCH">BCH</option>
+                          <option value="BSV">BSV</option>
+                          <option value="LTC">LTC</option>
+                          <option value="EOS">EOS</option>
+                          <option value="BNB">BNB</option>
+                          <option value="XTZ">XTZ</option>
                         </select>
                       </div>
                     </div>
-                   
                   </div>
                 </div>
               </div>
-
-
-
             </div>
           </div>
+          <!-- /Converter -->
 
+          <!-- Detailed Info List -->
+          <p>
+            <h2 class="text-center">Detailed Information</h2>
+          </p>
           <div class="row">
             <div class="col">
-             
+
               <!-- Currencies List -->
-              <div class="list-group">
+              <div class="list-group pb-2">
                 <a href="#"
-                  class="list-group-item list-group-item-action list-group-item-success sunny-morning-gradient currency"
-                  id="BTC">Bitcoin</a>
+                  class="list-group-item list-group-item-action border-right-0 border-left-0 d-flex justify-content-between align-items-center hoverable currency py-2"
+                  id="BTC">
+                  Bitcoin
+                  <img src="assets/img/icons/white/btc.svg" alt="" style="width:2.5rem">
+                </a>
                 <a href="#"
-                  class="list-group-item list-group-item-action list-group-item-success winter-neva-gradient currency"
-                  id="ETH">Etherium</a>
+                  class="list-group-item list-group-item-action border-right-0 border-left-0 d-flex justify-content-between align-items-center hoverable currency py-2"
+                  id="ETH">Etherium
+                  <img src="assets/img/icons/white/eth.svg" alt="" style="width:2.5rem">
+                </a>
                 <a href="#"
-                  class="list-group-item list-group-item-action list-group-item-success heavy-rain-gradient currency"
-                  id="XRP">XRP</a>
+                  class="list-group-item list-group-item-action border-right-0 border-left-0 d-flex justify-content-between align-items-center hoverable currency py-2"
+                  id="XRP">XRP
+                  <img src="assets/img/icons/white/xrp.svg" alt="" style="width:2.5rem"></a>
                 <a href="#"
-                  class="list-group-item list-group-item-action list-group-item-success tempting-azure-gradient currency"
-                  id="USDT">Tether</a>
+                  class="list-group-item list-group-item-action border-right-0 border-left-0 d-flex justify-content-between align-items-center hoverable currency py-2"
+                  id="USDT">Tether
+                  <img src="assets/img/icons/white/usdt.svg" alt="" style="width:2.5rem"></a>
                 <a href="#"
-                  class="list-group-item list-group-item-action list-group-item-success rainy-ashville-gradient currency"
-                  id="LTC">Litecoin</a>
+                  class="list-group-item list-group-item-action border-right-0 border-left-0 d-flex justify-content-between align-items-center hoverable currency py-2"
+                  id="BCH">Bitcoin Cash
+                  <img src="assets/img/icons/white/bch.svg" alt="" style="width:2.5rem"></a>
                 <a href="#"
-                  class="list-group-item list-group-item-action list-group-item-success cloudy-knoxville-gradient currency"
-                  id="EOS">EOS</a>
+                  class="list-group-item list-group-item-action border-right-0 border-left-0 d-flex justify-content-between align-items-center hoverable currency py-2"
+                  id="BSV">Bitcoin SV
+                  <img src="assets/img/icons/white/bsv.svg" alt="" style="width:2.5rem"></a>
                 <a href="#"
-                  class="list-group-item list-group-item-action list-group-item-success juicy-peach-gradient currency"
-                  id="BNB">Binance Coin</a>
+                  class="list-group-item list-group-item-action border-right-0 border-left-0 d-flex justify-content-between align-items-center hoverable currency py-2"
+                  id="LTC">Litecoin
+                  <img src="assets/img/icons/white/ltc.svg" alt="" style="width:2.5rem"></a>
                 <a href="#"
-                  class="list-group-item list-group-item-action list-group-item-success warm-flame-gradient currency"
-                  id="BSV">Bitcoin SV</a>
+                  class="list-group-item list-group-item-action border-right-0 border-left-0 d-flex justify-content-between align-items-center hoverable currency py-2"
+                  id="BNB">Binance Coin
+                  <img src="assets/img/icons/white/bnb.svg" alt="" style="width:2.5rem"></a>
                 <a href="#"
-                  class="list-group-item list-group-item-action list-group-item-success deep-blue-gradient currency"
-                  id="XLM">Stellar</a>
+                  class="list-group-item list-group-item-action border-right-0 border-left-0 d-flex justify-content-between align-items-center hoverable currency py-2"
+                  id="EOS">EOS
+                  <img src="assets/img/icons/white/eos.svg" alt="" style="width:2.5rem"></a>
+                <a href="#"
+                  class="list-group-item list-group-item-action border-right-0 border-left-0 d-flex justify-content-between align-items-center hoverable currency py-2"
+                  id="XTZ">Tezos
+                  <img src="assets/img/icons/white/xtz.svg" alt="" style="width:2.5rem"></a>
               </div>
             </div>
           </div>
+          <!-- /Detailed Info List -->
         </div>
+        <!-- /Sidebar -->
 
-        <div class="col-md-8" id="mainInfo">
-          <div class="row">
-            <div class="col">
-              <p>
-                <h1 id="coinTitle">
-                </h1>
-              </p>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-md-4">
-              <img id="img">
-            </div>
-            <div class="col-md-6 offset-md-2">
-              <h3 id="fcasRating"></h3>
-              <h3 id="marketMaturity"></h3>
-              <h3 id="lastRefreshed"></h3>
-            </div>
-          </div>
-          <div class="row my-4">
-            <div id="chart" class="col">
-              <!-- TradingView Widget BEGIN -->
-              <div class="tradingview-widget-container">
-                <div id="tradingview_af9df"></div>
-              </div>
-              <!-- TradingView Widget END -->
-            </div>
-          </div>
+        <!-- Detailed Info Panel-->
+        <div class="col-lg-8" id="mainInfo">
         </div>
+        <!-- /Detailed Info Panel-->
       </div>
     </div>
   </main>
+  <!-- /Main Section -->
 </body>
+<!-- WOW JavaScript -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
 <!-- JQuery -->
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 <!-- Bootstrap tooltips -->
@@ -196,78 +207,9 @@
   src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/js/bootstrap.min.js"></script>
 <!-- MDB core JavaScript -->
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.14.1/js/mdb.min.js"></script>
-
+<!-- Currency Stock Market Graph API -->
 <script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>
-
-<script src="assets/js/script.js"></script>
-<script>
-  VANTA.NET({
-    el: "#netBackground",
-    mouseControls: true,
-    touchControls: true,
-    scale: 1.00,
-    scaleMobile: 1.00,
-    color: 0xff9c6a,
-    backgroundColor: 0x212121
-  })
-  $(document).on("click", ".currency", function () {
-
-    //Generating Currency Name
-    var currencyName = $(this).text();
-    var coinTitle = document.getElementById("coinTitle");
-    var coinSymbol = $(this).attr("id");
-    var imgSrc = "assets/img/" + coinSymbol + ".png";
-
-    console.log(coinSymbol);
-    console.log(currencyName);
-    coinTitle.innerHTML = currencyName;
-    $("#img").attr({ src: imgSrc, width: "150rem", height: "150rem" });
-
-    //Generating Health Index
-    var queryURL =
-      "https://www.alphavantage.co/query?function=CRYPTO_RATING&symbol=" + coinSymbol + "&apikey=JIS93MUHML1GONJ2";
-    $.ajax({
-      url: queryURL,
-      dataType: "json",
-      method: "GET"
-    }).then(function (response) {
-      healthRating = response;
-      console.log(healthRating["Crypto Rating (FCAS)"]["3. fcas rating"]);
-
-      var fcasRating = document.getElementById("fcasRating");
-      var marketMaturity = document.getElementById("marketMaturity");
-      var lastRefreshed = document.getElementById("lastRefreshed");
-
-      var fcasRatingValue = healthRating["Crypto Rating (FCAS)"]["3. fcas rating"];
-      var marketMaturityValue = healthRating["Crypto Rating (FCAS)"]["6. market maturity score"];
-      var lastRefreshedValue = healthRating["Crypto Rating (FCAS)"]["8. last refreshed"].split(" ")[0];
-
-
-      fcasRating.innerHTML = "FCAS Rating: " + "<strong>" + fcasRatingValue + "</strong>";
-      marketMaturity.innerHTML = "Market Maturity Score: " + "<strong>" + marketMaturityValue + "</strong>";
-      lastRefreshed.innerHTML = "Last Refreshed Time: " + "<strong>" + lastRefreshedValue + "</strong>";
-    });
-
-    new TradingView.widget(
-      {
-        "autosize": true,
-        "symbol": "CRYPTOCAP:" + coinSymbol,
-        "interval": "D",
-        "timezone": "Etc/UTC",
-        "theme": "dark",
-        "style": "1",
-        "locale": "en",
-        "toolbar_bg": "#333333",
-        "enable_publishing": false,
-        "hide_legend": true,
-        "allow_symbol_change": true,
-        "save_image": false,
-        "container_id": "tradingview_af9df"
-      }
-    );
-
-
-  });
-</script>
+<!-- Custom Scripts -->
+<script src="assets/js/main.js"></script>
 
 </html>
