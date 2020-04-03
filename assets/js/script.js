@@ -1,13 +1,5 @@
 $(document).ready(function() {
-  function displayMessage(type, message) {
-    msgDiv.textContent = message;
-    msgDiv.setAttribute("class", type);
-  }
-
   $("#convertBtn").on("click", function() {
-    if (!$(this).val()) {
-      displayMessage("error", "Please fill out this field");
-    }
     var input = $("#inputGroup")
       .find(":selected")
       .attr("value");
