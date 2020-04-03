@@ -9,7 +9,7 @@ COINCHANGE is an agile web application that allows the users to watch the latest
 ### Desktop
 
 <img src="./assets/img/desktop.png" alt=" Coininchange desktop screenshot"/>
-
+![](./assets/img/desktop.png)
 ### Mobile
 
 <img src="./assets/img/mobile.png" height="400" alt=" Coininchange mobile screenshot"/>
