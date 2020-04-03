@@ -27,7 +27,7 @@ Clone the repository or download and unpack the source code of the project. From
 
 ## Additional Information
 
-Users may choose to include or exclude digits, uppercase & lowercase letters and special character in their passwords.
+Users may select the type of cryptocurrency to convert.
 
 ## Built With
 
