@@ -1,18 +1,18 @@
 [![Contributors][contributors-shield]][contributors-url] [![Forks][forks-shield]][forks-url] [![Stargazers][stars-shield]][stars-url] [![Issues][issues-shield]][issues-url] [![MIT License][license-shield]][license-url] [![LinkedIn][linkedin-shield]][linkedin-url]
 
-# Random Password Generator
+# Coininchange Currency Converter
 
-A simple lightweight web application that enables users to generate random passwords of desired length and strength.
+COINCHANGE is an agile web application that allows the users to watch the latest updates on the cryptocurrencies exchange rates and stock market overview.
 
 ## Screenshots
 
 ### Desktop
 
-<img src="assets/img/desktop.png" alt="Random password generator desktop screenshot"/>
-![](./assets/img/desktop.png)
+<img src="assets/img/desktop.png" alt=" Coininchange desktop screenshot"/>
+
 ### Mobile
-<img src="assets/img/mobile.png" height="400" alt="Random password generator mobile screenshot"/>
-![](./assets/img/mobile.png)
+
+<img src="assets/img/mobile.png" height="400" alt=" Coininchange mobile screenshot"/>
 
 ## Getting Started
 
@@ -20,9 +20,10 @@ Clone the repository or download and unpack the source code of the project. From
 
 ## Running the Application
 
-- To generate a password, click on the `Generate Password` button.
-- You will receive a number of prompts that will allows you to choose which characters to include in your password.
-- To copy your password, click on the `Copy Password` button.
+- Select the cryptocurrency type eg: BTC or ETC from the dropdown list, Then enter the amount on the input box.
+- Select the currency you want to convert eg: USD, AUD from the dropdown list.
+- To convert cryptocurrencies, click on the `convert` button.
+- To access the detail information about the cryptocurrency, go to detail information and click cryptocurrency name eg "Bitcoin".
 
 ## Additional Information
 
