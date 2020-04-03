@@ -16,8 +16,12 @@
   <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
   <!-- Material Design Bootstrap -->
   <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.14.1/css/mdb.min.css" rel="stylesheet">
+  <!-- Animate CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
   <!-- Custom Styles -->
-  <link rel="stylesheet" href="assets/css/style_index.css" />
+  <link rel="stylesheet" href="assets/css/main.css" />
+  <!-- Favicon -->
+  <link rel="icon" href="assets/img/favicon.ico" type="image/x-icon">
 </head>
 
 <body class="text-light" style="background-color: #131722;">
@@ -60,16 +64,16 @@
         <!-- /Title -->
 
         <!-- Sidebar -->
-        <div class="col-xl-4 offset-xl-2 text-center my-auto">
-          <img src="assets/img/undraw_inbox_cleanup_w2ur.svg" style="width: 100%;" alt="">
+        <div class="col-lg-4 offset-lg-2 text-center my-auto">
+          <img class="animated zoomIn" src="assets/img/contactUs.svg" alt="Contact us!" style="width: 100%;">
         </div>
         <!-- /Sidebar -->
 
-        <div class="col-xl-4 my-auto">
+        <div class="col-lg-4 my-auto">
 
 
           <!-- Default form contact -->
-          <form class="text-center p-5 " action="#!" onsubmit="return false">
+          <form class="text-center p-5 wow animated fadeIn" action="#!" onsubmit="return false">
 
             <p class="h4 mb-4">We will get back to you!</p>
 
@@ -89,8 +93,7 @@
 
 
             <!-- Send button -->
-            <div class="module-border-wrap"><button type="submit" class="btn btn-block btn-dark"
-                style="background-color: #131722 !important;">Send</button>
+            <div class="module-border-wrap"><button type="submit" class="btn btn-block btn-dark">Send</button>
             </div>
 
           </form>
@@ -101,6 +104,8 @@
     </div>
   </main>
 </body>
+<!-- WOW JavaScript -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
 <!-- JQuery -->
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 <!-- Bootstrap tooltips -->
@@ -111,6 +116,6 @@
 <!-- MDB core JavaScript -->
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.14.1/js/mdb.min.js"></script>
 <!-- Custom Scripts -->
-<script src="assets/js/script_contact.js"></script>
+<script src="assets/js/contactUs.js"></script>
 
 </html>
