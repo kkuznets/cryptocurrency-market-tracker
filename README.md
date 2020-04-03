@@ -27,7 +27,7 @@ Clone the repository or download and unpack the source code of the project. From
 
 ## Additional Information
 
-Users may select the type of cryptocurrency to convert.
+Users may select the type of cryptocurrency eg: BTC or ETC from the dropdown list to convert.
 
 ## Built With
 
