@@ -9,10 +9,10 @@ A simple lightweight web application that enables users to generate random passw
 ### Desktop
 
 <img src="assets/img/random_password_generator_desktop.png" alt="Random password generator desktop screenshot"/>
-![](./assest/img/desktop.png)
+![](./assets/img/desktop.png)
 ### Mobile
 <img src="assets/img/random_password_generator_mobile.png" height="400" alt="Random password generator mobile screenshot"/>
-![](./img/mobile.png)
+![](./assets/img/mobile.png)
 
 ## Getting Started
 
