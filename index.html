@@ -83,16 +83,16 @@
                           <option value="EOS">EOS</option>
                           <option value="BNB">Binance Coin</option>
                           <option value="BSV">Bitcoin SV</option>
-                          <option value="XLM">Stellar</option>
+                          <option value="XTZ">Tezos</option>
                         </select>
                       </div>
                       <input type="number" id="btcInput" class="form-control bg-transparent text-light"
                         aria-label="Dollar amount (with dot and two decimal places)" required>
+                      <button id="convertBtn" class="rounded-right" style="border-left: 0;">Convert</button>
                     </div>
                     <div id="msgDiv"></div>
                     <div class="input-group">
-                      <button id="convertBtn" class="peach-gradient lighten-3 text-dark rounded-left"
-                        style="border-right: 0;">Convert</button>
+                      <button id="copyBtn" class="rounded-left" style="border-right: 0;">Copy</button>
                       <input type="text" id="currencyDisplay" class="form-control bg-transparent text-light disabled"
                         aria-label="Dollar amount (with dot and two decimal places)">
                       <div class="input-group-append">
@@ -125,32 +125,35 @@
               <!-- Currencies List -->
               <div class="list-group">
                 <a href="#"
-                  class="list-group-item list-group-item-action list-group-item-success sunny-morning-gradient currency"
+                  class="list-group-item list-group-item-action list-group-item border-right-0 border-left-0 hoverable currency"
                   id="BTC">Bitcoin</a>
                 <a href="#"
-                  class="list-group-item list-group-item-action list-group-item-success winter-neva-gradient currency"
+                  class="list-group-item list-group-item-action list-group-item border-right-0 border-left-0 hoverable currency"
                   id="ETH">Etherium</a>
                 <a href="#"
-                  class="list-group-item list-group-item-action list-group-item-success heavy-rain-gradient currency"
+                  class="list-group-item list-group-item-action list-group-item border-right-0 border-left-0 hoverable currency"
                   id="XRP">XRP</a>
                 <a href="#"
-                  class="list-group-item list-group-item-action list-group-item-success tempting-azure-gradient currency"
+                  class="list-group-item list-group-item-action list-group-item border-right-0 border-left-0 hoverable currency"
                   id="USDT">Tether</a>
                 <a href="#"
-                  class="list-group-item list-group-item-action list-group-item-success rainy-ashville-gradient currency"
-                  id="LTC">Litecoin</a>
+                  class="list-group-item list-group-item-action list-group-item border-right-0 border-left-0 hoverable currency"
+                  id="BCH">Bitcoin Cash</a>
                 <a href="#"
-                  class="list-group-item list-group-item-action list-group-item-success cloudy-knoxville-gradient currency"
-                  id="EOS">EOS</a>
-                <a href="#"
-                  class="list-group-item list-group-item-action list-group-item-success juicy-peach-gradient currency"
-                  id="BNB">Binance Coin</a>
-                <a href="#"
-                  class="list-group-item list-group-item-action list-group-item-success warm-flame-gradient currency"
+                  class="list-group-item list-group-item-action list-group-item border-right-0 border-left-0 hoverable currency"
                   id="BSV">Bitcoin SV</a>
                 <a href="#"
-                  class="list-group-item list-group-item-action list-group-item-success deep-blue-gradient currency"
-                  id="XLM">Stellar</a>
+                  class="list-group-item list-group-item-action list-group-item border-right-0 border-left-0 hoverable currency"
+                  id="LTC">Litecoin</a>
+                <a href="#"
+                  class="list-group-item list-group-item-action list-group-item border-right-0 border-left-0 hoverable currency"
+                  id="BNB">Binance Coin</a>
+                <a href="#"
+                  class="list-group-item list-group-item-action list-group-item border-right-0 border-left-0 hoverable currency"
+                  id="EOS">EOS</a>
+                <a href="#"
+                  class="list-group-item list-group-item-action list-group-item border-right-0 border-left-0 hoverable currency"
+                  id="XTZ">Tezos</a>
               </div>
             </div>
           </div>
