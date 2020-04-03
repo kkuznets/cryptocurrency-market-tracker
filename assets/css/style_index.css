@@ -165,3 +165,17 @@ body {
     rgba(253, 100, 98, 1) 100%
   );
 }
+
+.services {
+  background: rgb(255, 143, 104);
+  background: linear-gradient(
+    90deg,
+    rgba(255, 143, 104, 1) 0%,
+    rgba(253, 100, 98, 1) 100%
+  );
+  color: #131722;
+}
+
+.currency {
+  color: #131722;
+}

@@ -115,40 +115,55 @@
               <!-- Currencies List -->
               <div class="list-group">
                 <a href="#"
-                  class="list-group-item list-group-item-action list-group-item border-right-0 border-left-0 hoverable currency"
-                  id="BTC">Bitcoin</a>
+                  class="list-group-item list-group-item-action border-right-0 border-left-0 d-flex justify-content-between align-items-center hoverable currency py-2"
+                  id="BTC">
+                  Bitcoin
+                  <img src="assets/img/icons/white/btc.svg" alt="" style="width:2.5rem">
+                </a>
                 <a href="#"
-                  class="list-group-item list-group-item-action list-group-item border-right-0 border-left-0 hoverable currency"
-                  id="ETH">Etherium</a>
+                  class="list-group-item list-group-item-action border-right-0 border-left-0 d-flex justify-content-between align-items-center hoverable currency py-2"
+                  id="ETH">Etherium
+                  <img src="assets/img/icons/white/eth.svg" alt="" style="width:2.5rem">
+                </a>
                 <a href="#"
-                  class="list-group-item list-group-item-action list-group-item border-right-0 border-left-0 hoverable currency"
-                  id="XRP">XRP</a>
+                  class="list-group-item list-group-item-action border-right-0 border-left-0 d-flex justify-content-between align-items-center hoverable currency py-2"
+                  id="XRP">XRP
+                  <img src="assets/img/icons/white/xrp.svg" alt="" style="width:2.5rem"></a>
                 <a href="#"
-                  class="list-group-item list-group-item-action list-group-item border-right-0 border-left-0 hoverable currency"
-                  id="USDT">Tether</a>
+                  class="list-group-item list-group-item-action border-right-0 border-left-0 d-flex justify-content-between align-items-center hoverable currency py-2"
+                  id="USDT">Tether
+                  <img src="assets/img/icons/white/usdt.svg" alt="" style="width:2.5rem"></a>
                 <a href="#"
-                  class="list-group-item list-group-item-action list-group-item border-right-0 border-left-0 hoverable currency"
-                  id="BCH">Bitcoin Cash</a>
+                  class="list-group-item list-group-item-action border-right-0 border-left-0 d-flex justify-content-between align-items-center hoverable currency py-2"
+                  id="BCH">Bitcoin Cash
+                  <img src="assets/img/icons/white/bch.svg" alt="" style="width:2.5rem"></a>
                 <a href="#"
-                  class="list-group-item list-group-item-action list-group-item border-right-0 border-left-0 hoverable currency"
-                  id="BSV">Bitcoin SV</a>
+                  class="list-group-item list-group-item-action border-right-0 border-left-0 d-flex justify-content-between align-items-center hoverable currency py-2"
+                  id="BSV">Bitcoin SV
+                  <img src="assets/img/icons/white/bsv.svg" alt="" style="width:2.5rem"></a>
                 <a href="#"
-                  class="list-group-item list-group-item-action list-group-item border-right-0 border-left-0 hoverable currency"
-                  id="LTC">Litecoin</a>
+                  class="list-group-item list-group-item-action border-right-0 border-left-0 d-flex justify-content-between align-items-center hoverable currency py-2"
+                  id="LTC">Litecoin
+                  <img src="assets/img/icons/white/ltc.svg" alt="" style="width:2.5rem"></a>
                 <a href="#"
-                  class="list-group-item list-group-item-action list-group-item border-right-0 border-left-0 hoverable currency"
-                  id="BNB">Binance Coin</a>
+                  class="list-group-item list-group-item-action border-right-0 border-left-0 d-flex justify-content-between align-items-center hoverable currency py-2"
+                  id="BNB">Binance Coin
+                  <img src="assets/img/icons/white/bnb.svg" alt="" style="width:2.5rem"></a>
                 <a href="#"
-                  class="list-group-item list-group-item-action list-group-item border-right-0 border-left-0 hoverable currency"
-                  id="EOS">EOS</a>
+                  class="list-group-item list-group-item-action border-right-0 border-left-0 d-flex justify-content-between align-items-center hoverable currency py-2"
+                  id="EOS">EOS
+                  <img src="assets/img/icons/white/eos.svg" alt="" style="width:2.5rem"></a>
                 <a href="#"
-                  class="list-group-item list-group-item-action list-group-item border-right-0 border-left-0 hoverable currency"
-                  id="XTZ">Tezos</a>
+                  class="list-group-item list-group-item-action border-right-0 border-left-0 d-flex justify-content-between align-items-center hoverable currency py-2"
+                  id="XTZ">Tezos
+                  <img src="assets/img/icons/white/xtz.svg" alt="" style="width:2.5rem"></a>
               </div>
             </div>
           </div>
         </div>
+        <div class="col-lg-8" id="mainInfo">
 
+        </div>
 
       </div>
     </div>
@@ -179,7 +194,8 @@
   })
 
   $(document).on("click", ".currency", function () {
-    $("#allInfo").append(`<div class="col-lg-8" id="mainInfo">
+    $("#mainInfo").empty();
+    $("#mainInfo").append(`
           <div class="row">
             <p>
               <h1 class="invisible"> Nothing
@@ -188,7 +204,7 @@
             <div class="col">
             </div>
           </div>
-          <div class="row">
+          <div class="row mb-5">
             <div class="col-lg-3 my-auto text-center">
               <img id="img">
             </div>
@@ -204,7 +220,7 @@
               <h4 id="lastRefreshed" class="align-middle"></h4>
             </div>
           </div>
-          <div class="row my-4">
+          <div class="row">
             <div class="col">
               <!-- TradingView Widget BEGIN -->
               <div class="tradingview-widget-container" id="chart">
@@ -212,19 +228,18 @@
               </div>
               <!-- TradingView Widget END -->
             </div>
-          </div>
-        </div>`)
+          </div>`)
 
     //Generating Currency Name
     var currencyName = $(this).text();
     var coinTitle = document.getElementById("coinTitle");
     var coinSymbol = $(this).attr("id");
-    var imgSrc = "assets/img/icons/" + coinSymbol + ".svg";
+    var imgSrc = "assets/img/icons/color/" + coinSymbol + ".svg";
 
     console.log(coinSymbol);
     console.log(currencyName);
     coinTitle.innerHTML = currencyName + " (" + coinSymbol + ")";
-    $("#img").attr({ src: imgSrc, width: "150rem", height: "150rem" });
+    $("#img").attr({ src: imgSrc, width: "144rem", height: "144rem" });
 
     //Generating Health Index
     var queryURL =
@@ -250,6 +265,7 @@
       marketMaturity.innerHTML = "Market Maturity Score: " + "<strong>" + marketMaturityValue + "</strong>";
       lastRefreshed.innerHTML = "Last Refreshed: " + "<strong>" + lastRefreshedValue + "</strong>";
     });
+    $("#chart").empty();
     $("#chart").append('<div id="tradingview_af9df"></div>')
 
     new TradingView.widget(
