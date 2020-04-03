@@ -1,18 +1,3 @@
-.input-group.md-form.form-sm.form-1 input {
-  border: 1px solid #bdbdbd;
-  border-top-right-radius: 0.25rem;
-  border-bottom-right-radius: 0.25rem;
-}
-.input-group.md-form.form-sm.form-2 input {
-  border: 1px solid #bdbdbd;
-  border-top-left-radius: 0.25rem;
-  border-bottom-left-radius: 0.25rem;
-}
-
-.input-group.md-form.form-sm.form-2 input.amber-border {
-  border: 1px solid white;
-}
-
 html,
 body {
   width: 100%;
@@ -178,4 +163,10 @@ body {
 
 .currency {
   color: #131722;
+}
+
+.module-border-wrap {
+  padding: 1rem;
+  background: linear-gradient(to right, #ffd570, #fc6963);
+  padding: 3px;
 }
