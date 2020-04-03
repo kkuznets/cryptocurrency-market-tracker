@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" id="netBackground">
+<html lang="en">
 
 <head>
   <meta charset="UTF-8" />
@@ -20,7 +20,7 @@
   <script src="https://www.vantajs.com/dist/vanta.net.min.js"></script>
 </head>
 
-<body class="text-light" style="background-color: #131722;">
+<body id="netBackground" class="text-light" style="background-color: #131722;">
 
   <!--Navbar-->
   <nav class="navbar navbar-expand-lg navbar-light peach-gradient lighten-3 py-4 font-weight-bold z-depth-1">
@@ -51,7 +51,7 @@
     <div class="container-fluid">
       <div class="row" id="allInfo">
         <!-- Sidebar -->
-        <div class="col-md-4">
+        <div class="col-lg-4">
           <div class="row mb-2">
             <div class="col text-center">
               <p>
@@ -178,7 +178,7 @@
     backgroundColor: 0x131722
   })
   $(document).on("click", ".currency", function () {
-    $("#allInfo").append(`<div class="col-md-8" id="mainInfo">
+    $("#allInfo").append(`<div class="col-lg-8" id="mainInfo">
           <div class="row">
             <p>
               <h1 class="invisible"> Nothing
@@ -188,16 +188,16 @@
             </div>
           </div>
           <div class="row">
-            <div class="col-md-2 text-center">
+            <div class="col-lg-3 my-auto text-center">
               <img id="img">
             </div>
-            <div class="col-md-4 my-auto text-center">
+            <div class="col-lg-4 my-auto mx-auto text-center">
               <p>
                 <h2 id="coinTitle">
                 </h2>
               </p>
             </div>
-            <div class="col-md offset-md-1 my-auto">
+            <div class="col-lg-5 my-auto">
               <h4 id="fcasRating" class="align-middle"></h4>
               <h4 id="marketMaturity" class="align-middle"></h4>
               <h4 id="lastRefreshed" class="align-middle"></h4>

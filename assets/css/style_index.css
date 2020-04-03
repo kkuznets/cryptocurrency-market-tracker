@@ -21,7 +21,7 @@ body {
 
 @media only screen and (max-width: 768px) {
   #netBackground {
-    min-height: 100vh;
+    background-size: cover;
   }
 }
 
