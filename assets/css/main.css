@@ -170,3 +170,11 @@ body {
   background: linear-gradient(to right, #ffd570, #fc6963);
   padding: 3px;
 }
+
+.btn-dark {
+  background-color: #131722 !important;
+}
+
+.btn-dark:hover {
+  background-color: transparent !important;
+}
