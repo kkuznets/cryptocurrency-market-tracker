@@ -31,11 +31,7 @@ Users may select the type of cryptocurrency eg: BTC or ETC from the dropdown lis
 
 ## Built With
 
-- HTML5, CSS3, Javascript
-
-- [Bootstrap](https://getbootstrap.com/) - The HTML, CSS and JS library.
-
-- [Favicon.io](https://favicon.io/) - Favicon generator
+- HTML5, CSS3, Javascript, JQuery
 
 ## Contributing
 
@@ -44,6 +40,8 @@ Please read [CONTRIBUTING.md](https://github.com/yours-kkuznets/Random-Password-
 ## Authors
 
 - **Kirill Kuznetsov** - [yours-kkuznets](https://github.com/yours-kkuznets)
+- **Midz Sreenivasan** - [MidzZCoder](https://github.com/MidzZCoder)
+- **Prakriti Rajbhandari** - [PrakritiRajbhandari](https://github.com/PrakritiRajbhandari)
 
 ## License
 
@@ -51,7 +49,6 @@ This project is licensed under the MIT License - see the [LICENSE.txt](https://g
 
 ## Acknowledgments
 
-- Courtney Tucker - [Ctucker9233](https://github.com/Ctucker9233) - Inspiration for the copy to clipboard functionality.
 - Billie Thompson - [PurpleBooth](https://gist.github.com/PurpleBooth) - [README.md](https://gist.github.com/PurpleBooth/109311bb0361f32d87a2) and [CONTRIBUTING.md](https://gist.github.com/PurpleBooth/b24679402957c63ec426) templates.
 
 [contributors-shield]: https://img.shields.io/github/contributors/yours-kkuznets/Currency-Exchange.svg?style=flat-square
