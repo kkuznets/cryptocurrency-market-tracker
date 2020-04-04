@@ -54,15 +54,15 @@ This project is licensed under the MIT License - see the [LICENSE.txt](https://g
 - Courtney Tucker - [Ctucker9233](https://github.com/Ctucker9233) - Inspiration for the copy to clipboard functionality.
 - Billie Thompson - [PurpleBooth](https://gist.github.com/PurpleBooth) - [README.md](https://gist.github.com/PurpleBooth/109311bb0361f32d87a2) and [CONTRIBUTING.md](https://gist.github.com/PurpleBooth/b24679402957c63ec426) templates.
 
-[contributors-shield]: https://img.shields.io/github/contributors/yours-kkuznets/Random-Password-Generator.svg?style=flat-square
-[contributors-url]: https://github.com/yours-kkuznets/Random-Password-Generator/graphs/contributors
-[forks-shield]: https://img.shields.io/github/forks/yours-kkuznets/Random-Password-Generator.svg?style=flat-square
-[forks-url]: https://github.com/othneildrew/yours-kkuznets/Random-Password-Generator/network/members
-[stars-shield]: https://img.shields.io/github/stars/yours-kkuznets/Random-Password-Generator.svg?style=flat-square
-[stars-url]: https://github.com/yours-kkuznets/Random-Password-Generator/stargazers
-[issues-shield]: https://img.shields.io/github/issues/yours-kkuznets/Random-Password-Generator.svg?style=flat-square
-[issues-url]: https://github.com/yours-kkuznets/Random-Password-Generator/issues
-[license-shield]: https://img.shields.io/github/license/yours-kkuznets/Random-Password-Generator.svg?style=flat-square
-[license-url]: https://github.com/yours-kkuznets/Random-Password-Generator/blob/master/LICENSE.txt
+[contributors-shield]: https://img.shields.io/github/contributors/yours-kkuznets/Currency-Exchange.svg?style=flat-square
+[contributors-url]: https://github.com/yours-kkuznets/Currency-Exchange/graphs/contributors
+[forks-shield]: https://img.shields.io/github/forks/yours-kkuznets/Currency-Exchange.svg?style=flat-square
+[forks-url]: https://github.com/othneildrew/yours-kkuznets/Currency-Exchange/network/members
+[stars-shield]: https://img.shields.io/github/stars/yours-kkuznets/Currency-Exchange.svg?style=flat-square
+[stars-url]: https://github.com/yours-kkuznets/Currency-Exchange/stargazers
+[issues-shield]: https://img.shields.io/github/issues/yours-kkuznets/Currency-Exchange.svg?style=flat-square
+[issues-url]: https://github.com/yours-kkuznets/Currency-Exchange/issues
+[license-shield]: https://img.shields.io/github/license/yours-kkuznets/Currency-Exchange.svg?style=flat-square
+[license-url]: https://github.com/yours-kkuznets/Currency-Exchanger/blob/master/LICENSE.txt
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=flat-square&logo=linkedin&colorB=555
 [linkedin-url]: https://linkedin.com/in/yourskkuznets
