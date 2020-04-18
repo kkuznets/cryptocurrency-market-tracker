@@ -1,13 +1,13 @@
-[contributors-shield]: https://img.shields.io/github/contributors/yours-kkuznets/Currency-Exchange.svg?style=flat-square
-[contributors-url]: https://github.com/yours-kkuznets/Currency-Exchange/graphs/contributors
-[forks-shield]: https://img.shields.io/github/forks/yours-kkuznets/Currency-Exchange.svg?style=flat-square
-[forks-url]: https://github.com/yours-kkuznets/Currency-Exchange/network/members
-[stars-shield]: https://img.shields.io/github/stars/yours-kkuznets/Currency-Exchange.svg?style=flat-square
-[stars-url]: https://github.com/yours-kkuznets/Currency-Exchange/stargazers
-[issues-shield]: https://img.shields.io/github/issues/yours-kkuznets/Currency-Exchange.svg?style=flat-square
-[issues-url]: https://github.com/yours-kkuznets/Currency-Exchange/issues
-[license-shield]: https://img.shields.io/github/license/yours-kkuznets/Currency-Exchange.svg?style=flat-square
-[license-url]: https://github.com/yours-kkuznets/Currency-Exchanger/blob/master/LICENSE.txt
+[contributors-shield]: https://img.shields.io/github/contributors/yours-kkuznets/Coinchange-Crypto-Tracker.svg?style=flat-square
+[contributors-url]: https://github.com/yours-kkuznets/Coinchange-Crypto-Tracker/graphs/contributors
+[forks-shield]: https://img.shields.io/github/forks/yours-kkuznets/Coinchange-Crypto-Tracker.svg?style=flat-square
+[forks-url]: https://github.com/yours-kkuznets/Coinchange-Crypto-Tracker/network/members
+[stars-shield]: https://img.shields.io/github/stars/yours-kkuznets/Coinchange-Crypto-Tracker.svg?style=flat-square
+[stars-url]: https://github.com/yours-kkuznets/Coinchange-Crypto-Tracker/stargazers
+[issues-shield]: https://img.shields.io/github/issues/yours-kkuznets/Coinchange-Crypto-Tracker.svg?style=flat-square
+[issues-url]: https://github.com/yours-kkuznets/Coinchange-Crypto-Tracker/issues
+[license-shield]: https://img.shields.io/github/license/yours-kkuznets/Coinchange-Crypto-Tracker.svg?style=flat-square
+[license-url]: https://github.com/yours-kkuznets/Coinchange-Crypto-Tracker/blob/master/LICENSE.txt
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=flat-square&logo=linkedin&colorB=555
 [linkedin-url]: https://linkedin.com/in/yourskkuznets
 
