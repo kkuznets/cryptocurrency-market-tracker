@@ -19,7 +19,7 @@ COINCHANGE is an agile web application that allows the users to watch the latest
 
 ## Link to Application
 
-Follow [this link](https://yours-kkuznets.github.io/Custom-CSS-Portfolio/) to view the application.
+Follow [this link](https://yours-kkuznets.github.io/Coinchange-Crypto-Tracker/) to view the application.
 
 ## Screenshots
 
