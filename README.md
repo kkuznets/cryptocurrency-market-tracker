@@ -13,7 +13,7 @@
 
 [![Contributors][contributors-shield]][contributors-url] [![Forks][forks-shield]][forks-url] [![Stargazers][stars-shield]][stars-url] [![Issues][issues-shield]][issues-url] [![MIT License][license-shield]][license-url] [![LinkedIn][linkedin-shield]][linkedin-url]
 
-# Coinchange Currency Converter
+# Coinchange Cryptocurency Tracker & Converter
 
 COINCHANGE is an agile web application that allows the users to watch the latest updates on the cryptocurrencies exchange rates and stock market overview.
 
