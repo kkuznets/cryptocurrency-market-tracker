@@ -16,7 +16,7 @@
 
 # [Coinchange Cryptocurrency Tracker](https://kkuznets.github.io/cryptocurrency-market-tracker/) <!-- omit in toc -->
 
-> COINCHANGE is an agile web application that allows the users totrack the cryptocurrencies exchange rates and see updates on the crypto market.
+> An agile web application that allows the users totrack the cryptocurrencies exchange rates and see updates on the crypto market.
 
 [![Contributors][contributors-shield]][contributors-url] [![Forks][forks-shield]][forks-url] [![Stargazers][stars-shield]][stars-url] [![Issues][issues-shield]][issues-url] [![MIT License][license-shield]][license-url] [![LinkedIn][linkedin-shield]][linkedin-url]
 
