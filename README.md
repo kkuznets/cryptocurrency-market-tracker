@@ -13,12 +13,12 @@
 
 
 
-
 # [Coinchange Cryptocurrency Tracker](https://kkuznets.github.io/cryptocurrency-market-tracker/) <!-- omit in toc -->
 
-> An agile web application that allows the users totrack the cryptocurrencies exchange rates and see updates on the crypto market.
 
 [![Contributors][contributors-shield]][contributors-url] [![Forks][forks-shield]][forks-url] [![Stargazers][stars-shield]][stars-url] [![Issues][issues-shield]][issues-url] [![MIT License][license-shield]][license-url] [![LinkedIn][linkedin-shield]][linkedin-url]
+
+> An agile web application that allows the users totrack the cryptocurrencies exchange rates and see updates on the crypto market.
 
 <img src="https://raw.githubusercontent.com/kkuznets/cryptocurrency-market-tracker/master/assets/img/demo.png" alt="ProjectName Demo"/>
 
@@ -38,7 +38,7 @@
 
 ## 🔧 Getting Started
 
-Clone the repository or download and unpack the source code of the project. From the project folder, open the index.html file with your preferred browser.
+Clone the repository or download and unpack the source code of the project. From the project folder, open the `index.html` file with your preferred browser.
 
 - Select the cryptocurrency type (`BTC`) from the dropdown list and enter the desired amount to convert it to another currency.
 - To access the detailed information about particular coin, select it on the information pane on the right.
